@@ -1,0 +1,79 @@
+class AppIcons {
+  //======================== basepath icon =========================
+  static const String basepathIcon = 'assets/icons';
+
+  static const String fixzo = '$basepathIcon/fixzo.svg';
+  static const String acrepair = '$basepathIcon/acrepair.svg';
+  static const String apple = '$basepathIcon/apple.svg';
+  static const String applepay = '$basepathIcon/applepay.svg';
+  static const String appliance = '$basepathIcon/appliance.svg';
+  static const String arrowright = '$basepathIcon/arrowright.svg';
+  static const String beauty = '$basepathIcon/beauty.svg';
+  static const String calender = '$basepathIcon/calender.svg';
+  static const String cleaning = '$basepathIcon/cleaning.svg';
+  static const String clock = '$basepathIcon/clock.svg';
+  static const String cross = '$basepathIcon/cross.svg';
+  static const String done = '$basepathIcon/done.svg';
+  static const String electronics = '$basepathIcon/election.svg';
+  static const String filter = '$basepathIcon/filter.svg';
+  static const String google = '$basepathIcon/google.svg';
+  static const String islocation = '$basepathIcon/isiconmaplocation.svg';
+  static const String laundry = '$basepathIcon/laundry.svg';
+  static const String leftarrow = '$basepathIcon/leftarrow.svg';
+  static const String location = '$basepathIcon/location.svg';
+  static const String lock = '$basepathIcon/lock.svg';
+  static const String mail = '$basepathIcon/mail.svg';
+  static const String mastercard = '$basepathIcon/Mastercard.svg';
+  static const String arrowleft = '$basepathIcon/arrowleft.svg';
+  static const String bookingfilled = '$basepathIcon/bookingfilled.svg';
+  static const String bookingunfilled = '$basepathIcon/bookingunfilled.svg';
+  static const String homefilled = '$basepathIcon/homefilled.svg';
+  static const String homeunfilled = '$basepathIcon/homeunfilled.svg';
+  static const String profilefilled = '$basepathIcon/profilefilled.svg';
+  static const String profileunfilled = '$basepathIcon/profileunfilled.svg';
+  static const String servicesfilled = '$basepathIcon/servicesfilled.svg';
+  static const String servicesunfilled = '$basepathIcon/servicesunfilled.svg';
+  static const String notification = '$basepathIcon/notification.svg';
+  static const String searchgrey = '$basepathIcon/searchgrey.svg';
+  static const String searchorange = '$basepathIcon/searchorange.svg';
+  static const String repair = '$basepathIcon/repairing.svg';
+  static const String painting = '$basepathIcon/painting.svg';
+  static const String massage = '$basepathIcon/massage.svg';
+
+  static const String plumbing = '$basepathIcon/plumbing.svg';
+  static const String shifting = '$basepathIcon/shifting.svg';
+  static const String more = '$basepathIcon/more.svg';
+  static const String hi = '$basepathIcon/hi.svg';
+  static const String star = '$basepathIcon/star.svg';
+  static const String schedule = '$basepathIcon/schedule.svg';
+  static const String time = '$basepathIcon/time.svg';
+  static const String call = '$basepathIcon/call.svg';
+  static const String messege = '$basepathIcon/messege.svg';
+  static const String starunfilled = '$basepathIcon/starunfilled.svg';
+  static const String sendicon = '$basepathIcon/send.svg';
+  static const String stripe = '$basepathIcon/stripe.svg';
+  static const String circle = '$basepathIcon/circle.svg';
+  static const String circlefilled = '$basepathIcon/circlefilled.svg';
+  static const String visa = '$basepathIcon/visa.svg';
+  static const String editProfile = '$basepathIcon/editprofile.svg';
+  static const String notificationProfile =
+      '$basepathIcon/notificationprofile.svg';
+  static const String locationprofile = '$basepathIcon/locationprofile.svg';
+  static const String logout = '$basepathIcon/logout.svg';
+  static const String privacy = '$basepathIcon/privacy.svg';
+  static const String security = '$basepathIcon/security.svg';
+  static const String terms = '$basepathIcon/terms.svg';
+  static const String editprofileBold = '$basepathIcon/editprofilebold.svg';
+  static const String inbox = '$basepathIcon/inbox.svg';
+  static const String notificationblack = '$basepathIcon/notificationblack.svg';
+  static const String plus = '$basepathIcon/plus.svg';
+  static const String key = '$basepathIcon/key.svg';
+  static const String delete = '$basepathIcon/delete.svg';
+  static const String camera = '$basepathIcon/camera.svg';
+  static const String id = '$basepathIcon/id.svg';
+  static const String selfie = '$basepathIcon/selfie.svg';
+  static const String tekeselfie = '$basepathIcon/takeselfie.svg';
+  static const String uploadphoto = '$basepathIcon/takeselfie.svg';
+
+  // static const String searchorange = '$basepathIcon/searchorange.svg';
+}
