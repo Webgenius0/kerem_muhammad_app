@@ -21,10 +21,18 @@ class OneboardingScreenTwo extends StatefulWidget {
 class _OneboardingScreenTwoState extends State<OneboardingScreenTwo> {
   int goalselectedIndex = -1;
 
-  void selectionGoal(int index) {
+  // void selectionGoal(int index) {
+  //   setState(() {
+  //     goalselectedIndex = index;
+  //   });
+  // }
+
+  void selectionGoal(int index, String title) {
     setState(() {
       goalselectedIndex = index;
     });
+
+    debugPrint("Workout Title: $title");
   }
 
   @override
@@ -51,7 +59,7 @@ class _OneboardingScreenTwoState extends State<OneboardingScreenTwo> {
                 style: TextFontStyle.txtfontstyle24w700c212121,
               ),
             ),
-            UIHelper.verticalspace16,
+            UIHelper.verticalSpace(10.h),
             Center(
               child: Text(
                 'Goal?',
@@ -63,7 +71,7 @@ class _OneboardingScreenTwoState extends State<OneboardingScreenTwo> {
               padding: EdgeInsets.only(top: 39.h, bottom: 8.h),
               child: CustomGoalCard(
                 onTap: () {
-                  selectionGoal(0);
+                  selectionGoal(0, 'Loose Weight');
                 },
                 cardBorderColor: goalselectedIndex == 0
                     ? AppColors.cFF5722
@@ -80,7 +88,7 @@ class _OneboardingScreenTwoState extends State<OneboardingScreenTwo> {
               padding: EdgeInsets.symmetric(vertical: 8.h),
               child: CustomGoalCard(
                 onTap: () {
-                  selectionGoal(1);
+                  selectionGoal(1, 'Maintain Weight');
                 },
                 cardBorderColor: goalselectedIndex == 1
                     ? AppColors.cFF5722
@@ -97,7 +105,7 @@ class _OneboardingScreenTwoState extends State<OneboardingScreenTwo> {
               padding: EdgeInsets.symmetric(vertical: 8.h),
               child: CustomGoalCard(
                 onTap: () {
-                  selectionGoal(2);
+                  selectionGoal(2, 'Gain Weight');
                 },
                 cardBorderColor: goalselectedIndex == 2
                     ? AppColors.cFF5722
@@ -114,7 +122,7 @@ class _OneboardingScreenTwoState extends State<OneboardingScreenTwo> {
               padding: EdgeInsets.symmetric(vertical: 8.h),
               child: CustomGoalCard(
                 onTap: () {
-                  selectionGoal(3);
+                  selectionGoal(3, 'Become Ripped');
                 },
                 cardBorderColor: goalselectedIndex == 3
                     ? AppColors.cFF5722
@@ -131,7 +139,7 @@ class _OneboardingScreenTwoState extends State<OneboardingScreenTwo> {
               padding: EdgeInsets.symmetric(vertical: 8.h),
               child: CustomGoalCard(
                 onTap: () {
-                  selectionGoal(4);
+                  selectionGoal(4, 'Get Healthier');
                 },
                 cardBorderColor: goalselectedIndex == 4
                     ? AppColors.cFF5722

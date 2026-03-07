@@ -8,4 +8,6 @@ class AppImages {
   static const String gain = '$basepathImg/gain.png';
   static const String maintain = '$basepathImg/maintain.png';
   static const String onboardingThree = '$basepathImg/onboardingthree.png';
+  static const String human = '$basepathImg/human.png';
+  static const String dedicated = '$basepathImg/dedicated.png';
 }

@@ -5,6 +5,8 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:kerem_muhammad_app/features/auth/login_sign_up/presentation/login_sign_up_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/get_started_screen.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_five.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_four.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_one.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_three.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/oneboarding_screen_two.dart';
@@ -22,6 +24,8 @@ final class Routes {
   static const String onboardingScreenOne = '/onboardingScreenOne';
   static const String onboardingScreenTwo = '/onboardingScreenTwo';
   static const String onboardingScreenThree = '/onboardingScreenThree';
+  static const String onboardingScreenFour = '/onboardingScreenFour';
+  static const String onboardingScreenFive = '/onboardingScreenFive';
 }
 
 final class RouteGenerator {
@@ -86,6 +90,26 @@ final class RouteGenerator {
               )
             : CupertinoPageRoute(
                 builder: (context) => const OnboardingScreenThree(),
+              );
+
+      case Routes.onboardingScreenFour:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenFour()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenFour(),
+              );
+
+      case Routes.onboardingScreenFive:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenFive()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenFive(),
               );
 
       default:
