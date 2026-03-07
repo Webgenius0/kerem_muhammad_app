@@ -17,4 +17,15 @@ class TextFontStyle {
     fontSize: 24.sp,
     fontWeight: FontWeight.w500,
   );
+
+  static final txtfontstyle20w400cD1D5DB = GoogleFonts.exo(
+    color: AppColors.cD1D5DB,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static final txtfontstyle13w400c9CA3AF = GoogleFonts.exo(
+    color: AppColors.c9CA3AF,
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w400,
+  );
 }

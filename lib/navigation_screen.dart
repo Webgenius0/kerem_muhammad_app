@@ -73,8 +73,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
                   child: _buildNavItem(
                     0,
                     _currentIndex == 0
-                        ? AppIcons.homefilled
-                        : AppIcons.homeunfilled,
+                        ? AppIcons.basepathIcon
+                        : AppIcons.basepathIcon,
                     'Home',
                   ),
                 ),
@@ -82,8 +82,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
                   child: _buildNavItem(
                     1,
                     _currentIndex == 1
-                        ? AppIcons.bookingfilled
-                        : AppIcons.bookingunfilled,
+                        ? AppIcons.basepathIcon
+                        : AppIcons.basepathIcon,
                     'Booking',
                   ),
                 ),
@@ -91,8 +91,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
                   child: _buildNavItem(
                     2,
                     _currentIndex == 2
-                        ? AppIcons.servicesfilled
-                        : AppIcons.servicesunfilled,
+                        ? AppIcons.basepathIcon
+                        : AppIcons.basepathIcon,
                     'Services',
                   ),
                 ),
@@ -100,8 +100,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
                   child: _buildNavItem(
                     3,
                     _currentIndex == 3
-                        ? AppIcons.profilefilled
-                        : AppIcons.profileunfilled,
+                        ? AppIcons.basepathIcon
+                        : AppIcons.basepathIcon,
                     'Profile',
                   ),
                 ),

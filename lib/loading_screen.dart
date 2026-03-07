@@ -41,7 +41,7 @@ class _LoadingState extends State<Loading> {
     if (_isLoading) {
       return const WelcomeScreen();
     } else {
-      return HomeScreen();
+      return WelcomeScreen();
 
       // return const GetStartedFirstScreen();
     }
