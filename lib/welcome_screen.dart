@@ -27,18 +27,22 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           Positioned.fill(
             child: Image.asset(AppImages.splash, fit: BoxFit.cover),
           ),
-          Center(
-            child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
-              child: Column(
-                children: [
-                  SvgPicture.asset(AppIcons.fitforgeSplashicon),
-                  UIHelper.verticalSpace(8.h),
-                  Text(
-                    'Your Fitness. Your Goal.',
-                    style: TextFontStyle.txtfontstyle20w400cD1D5DB,
-                  ),
-                ],
+          Positioned.fill(
+            child: Center(
+              child: SingleChildScrollView(
+                physics: BouncingScrollPhysics(
+                  parent: AlwaysScrollableScrollPhysics(),
+                ),
+                child: Column(
+                  children: [
+                    SvgPicture.asset(AppIcons.fitforgeSplashicon),
+                    UIHelper.verticalSpace(8.h),
+                    Text(
+                      'Your Fitness. Your Goal.',
+                      style: TextFontStyle.txtfontstyle20w400cD1D5DB,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

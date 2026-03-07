@@ -4,4 +4,8 @@ class AppImages {
 
   static const String splash = '$basepathImg/splash.png';
   static const String loginsignupbg = '$basepathImg/loginsignupbg.png';
+  static const String fire = '$basepathImg/fire.png';
+  static const String gain = '$basepathImg/gain.png';
+  static const String maintain = '$basepathImg/maintain.png';
+  static const String onboardingThree = '$basepathImg/onboardingthree.png';
 }

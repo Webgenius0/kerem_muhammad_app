@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_icons.dart';
 import 'package:kerem_muhammad_app/common_widgets/custom_app_bar_onboarding.dart';
 import 'package:kerem_muhammad_app/constants/text_font_style.dart';
+import 'package:kerem_muhammad_app/helpers/all_routes.dart';
 import 'package:kerem_muhammad_app/helpers/navigation_service.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
@@ -45,10 +46,20 @@ class _OnboardingScreenOneState extends State<OnboardingScreenOne> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(bottom: 20.h),
-                  child: SvgPicture.asset(AppIcons.female),
+                  padding: EdgeInsets.only(bottom: 30.h),
+                  child: GestureDetector(
+                    onTap: () {
+                      NavigationService.navigateTo(Routes.onboardingScreenTwo);
+                    },
+                    child: SvgPicture.asset(AppIcons.female),
+                  ),
                 ),
-                SvgPicture.asset(AppIcons.male),
+                GestureDetector(
+                  onTap: () {
+                    NavigationService.navigateTo(Routes.onboardingScreenTwo);
+                  },
+                  child: SvgPicture.asset(AppIcons.male),
+                ),
               ],
             ),
 
@@ -57,15 +68,45 @@ class _OnboardingScreenOneState extends State<OnboardingScreenOne> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Female', style: TextFontStyle.txtfontstyle24w600c212121),
-                Text('Male', style: TextFontStyle.txtfontstyle24w600c212121),
+                GestureDetector(
+                  onTap: () {
+                    NavigationService.navigateTo(Routes.onboardingScreenTwo);
+                  },
+                  child: Text(
+                    'Female',
+                    style: TextFontStyle.txtfontstyle24w600c212121,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    NavigationService.navigateTo(Routes.onboardingScreenTwo);
+                  },
+                  child: Text(
+                    'Male',
+                    style: TextFontStyle.txtfontstyle24w600c212121,
+                  ),
+                ),
               ],
             ),
-
             UIHelper.verticalSpace(60.h),
-            Center(child: SvgPicture.asset(AppIcons.other)),
+            Center(
+              child: GestureDetector(
+                onTap: () {
+                  NavigationService.navigateTo(Routes.onboardingScreenTwo);
+                },
+                child: SvgPicture.asset(AppIcons.other),
+              ),
+            ),
             UIHelper.verticalSpace(20.h),
-            Text('Other', style: TextFontStyle.txtfontstyle24w600c212121),
+            GestureDetector(
+              onTap: () {
+                NavigationService.navigateTo(Routes.onboardingScreenTwo);
+              },
+              child: Text(
+                'Other',
+                style: TextFontStyle.txtfontstyle24w600c212121,
+              ),
+            ),
 
             UIHelper.verticalspace32,
           ],
