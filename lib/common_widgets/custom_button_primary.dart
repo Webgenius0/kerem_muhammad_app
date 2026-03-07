@@ -32,7 +32,7 @@ class CustomButtonprimary extends StatelessWidget {
           color: buttonColor,
           borderRadius: BorderRadius.circular(48.r),
         ),
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 18.h),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
