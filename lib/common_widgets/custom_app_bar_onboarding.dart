@@ -37,8 +37,9 @@ class CustomAppBarOnboarding extends StatelessWidget
                 onTap: onTap,
                 child: SvgPicture.asset(
                   svgimg!,
-                  height: 26.h,
-                  width: 26.w,
+                  width: 20.w,
+                  height: 14.h,
+
                   colorFilter: ColorFilter.mode(
                     AppColors.c454545,
                     BlendMode.srcIn,
@@ -53,9 +54,21 @@ class CustomAppBarOnboarding extends StatelessWidget
           ),
 
           Center(
-            child: Text(
-              "Step $currentStep of 12",
-              style: TextFontStyle.txtfontstyle26w600cFFFFF,
+            child: Text.rich(
+              TextSpan(
+                text: 'Step ',
+                style: TextFontStyle.txtfontstyle16w700c212121,
+                children: <TextSpan>[
+                  TextSpan(
+                    text: '$currentStep ',
+                    style: TextFontStyle.txtfontstyle16w700c212121,
+                  ),
+                  TextSpan(
+                    text: 'of 12',
+                    style: TextFontStyle.txtfontstyle16w400c5C5C5C,
+                  ),
+                ],
+              ),
             ),
           ),
         ],
