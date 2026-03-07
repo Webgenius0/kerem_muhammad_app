@@ -5,6 +5,9 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:kerem_muhammad_app/features/auth/login_sign_up/presentation/login_sign_up_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/get_started_screen.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_one.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_three.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/oneboarding_screen_two.dart';
 import 'package:kerem_muhammad_app/navigation_screen.dart';
 
 final class Routes {
@@ -16,6 +19,9 @@ final class Routes {
   static const String loginSignupScreen = '/loginSignupScreen';
   //========================= onboarding ======================
   static const String getstartedScreen = '/getstartedScreen';
+  static const String onboardingScreenOne = '/onboardingScreenOne';
+  static const String onboardingScreenTwo = '/onboardingScreenTwo';
+  static const String onboardingScreenThree = '/onboardingScreenThree';
 }
 
 final class RouteGenerator {
@@ -53,6 +59,33 @@ final class RouteGenerator {
               )
             : CupertinoPageRoute(
                 builder: (context) => const GetStartedScreen(),
+              );
+      case Routes.onboardingScreenOne:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenOne()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenOne(),
+              );
+      case Routes.onboardingScreenTwo:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OneboardingScreenTwo()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OneboardingScreenTwo(),
+              );
+      case Routes.onboardingScreenThree:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenThree()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenThree(),
               );
 
       default:

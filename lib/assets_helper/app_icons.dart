@@ -7,4 +7,8 @@ class AppIcons {
   static const String apple = '$basepathIcon/apple.svg';
   static const String email = '$basepathIcon/email.svg';
   static const String onboardingic = '$basepathIcon/onboardingic.svg';
+  static const String arrowleft = '$basepathIcon/arrowleft.svg';
+  static const String female = '$basepathIcon/female.svg';
+  static const String male = '$basepathIcon/male.svg';
+  static const String other = '$basepathIcon/other.svg';
 }

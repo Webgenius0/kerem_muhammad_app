@@ -5,6 +5,8 @@ import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_icons.dart';
 import 'package:kerem_muhammad_app/common_widgets/custom_button_primary.dart';
 import 'package:kerem_muhammad_app/constants/text_font_style.dart';
+import 'package:kerem_muhammad_app/helpers/all_routes.dart';
+import 'package:kerem_muhammad_app/helpers/navigation_service.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
 class GetStartedScreen extends StatefulWidget {
@@ -39,7 +41,9 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
             UIHelper.verticalSpace(240.h),
             CustomButtonprimary(
               title: 'Get started',
-              onTap: () {},
+              onTap: () {
+                NavigationService.navigateTo(Routes.onboardingScreenOne);
+              },
               buttonColor: AppColors.primaryColor,
               textColor: AppColors.cFFFFFF,
             ),
