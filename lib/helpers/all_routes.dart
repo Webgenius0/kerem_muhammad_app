@@ -3,6 +3,8 @@
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
+import 'package:kerem_muhammad_app/features/auth/login_sign_up/presentation/login_sign_up_screen.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/get_started_screen.dart';
 import 'package:kerem_muhammad_app/navigation_screen.dart';
 
 final class Routes {
@@ -10,9 +12,10 @@ final class Routes {
   Routes._internal();
   static Routes get instance => _routes;
 
-  //================== role =================
-  static const String chooseRoleScreen = '/chooseRoleScreen';
   static const String navigatiseScreen = '/navigatiseScreen';
+  static const String loginSignupScreen = '/loginSignupScreen';
+  //========================= onboarding ======================
+  static const String getstartedScreen = '/getstartedScreen';
 }
 
 final class RouteGenerator {
@@ -30,6 +33,26 @@ final class RouteGenerator {
               )
             : CupertinoPageRoute(
                 builder: (context) => const NavigationScreen(),
+              );
+
+      case Routes.loginSignupScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: LoginSignUpScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const LoginSignUpScreen(),
+              );
+
+      case Routes.getstartedScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: GetStartedScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const GetStartedScreen(),
               );
 
       default:

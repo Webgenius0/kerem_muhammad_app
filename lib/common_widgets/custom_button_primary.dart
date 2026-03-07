@@ -30,9 +30,9 @@ class CustomButtonprimary extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: buttonColor,
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(48.r),
         ),
-        padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 10.h),
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -40,9 +40,8 @@ class CustomButtonprimary extends StatelessWidget {
             UIHelper.horizontalSpace(6.w),
             Text(
               title,
-              style: TextFontStyle.txtfontstyle24w500primaryColor.copyWith(
+              style: TextFontStyle.txtfontstyle16w600cFFFFFF.copyWith(
                 color: textColor,
-                fontSize: fontSize ?? 20.sp,
               ),
             ),
           ],

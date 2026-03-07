@@ -37,7 +37,7 @@ class CustomAppBarDivider extends StatelessWidget
                 child: Container(
                   padding: EdgeInsets.all(10.sp),
                   decoration: BoxDecoration(
-                    color: AppColors.primary10percent,
+                    color: AppColors.primarycolor,
                     borderRadius: BorderRadius.circular(200.r),
                   ),
                   child: SvgPicture.asset(

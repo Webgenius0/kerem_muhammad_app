@@ -85,7 +85,7 @@ class UtillScreenMobile extends StatelessWidget {
     String language = appData.read(kKeyLanguage) ?? 'en';
     // String countryCode = appData.read(kKeyCountryCode) ?? 'US';
     return ScreenUtilInit(
-      designSize: const Size(430, 932),
+      designSize: const Size(369, 800),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
