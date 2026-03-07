@@ -66,7 +66,6 @@ class _LoginSignUpScreenState extends State<LoginSignUpScreen> {
                   ),
 
                   SizedBox(height: 40.h),
-
                   CustomButtonprimary(
                     title: 'Skip for Now',
                     onTap: () {
@@ -97,8 +96,7 @@ class _LoginSignUpScreenState extends State<LoginSignUpScreen> {
                       ),
                     ],
                   ),
-
-                  SizedBox(height: 32.h),
+                  UIHelper.verticalspace32,
                 ],
               ),
             ),
