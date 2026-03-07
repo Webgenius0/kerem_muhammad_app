@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kerem_muhammad_app/features/home/presentation/home_screen.dart';
+import 'package:kerem_muhammad_app/features/auth/login_sign_up/presentation/login_sign_up_screen.dart';
 import 'constants/app_constants.dart';
 import 'helpers/di.dart';
 import 'helpers/helper_methods.dart';
@@ -41,9 +41,7 @@ class _LoadingState extends State<Loading> {
     if (_isLoading) {
       return const WelcomeScreen();
     } else {
-      return WelcomeScreen();
-
-      // return const GetStartedFirstScreen();
+      return LoginSignUpScreen();
     }
   }
 }
