@@ -140,7 +140,6 @@ class _OnboardingScreenEightState extends State<OnboardingScreenEight> {
             ),
 
             UIHelper.verticalSpace(40.h),
-
             SizedBox(
               height: 140.h,
               child: Stack(
