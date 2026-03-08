@@ -44,15 +44,15 @@ class _OnboardingScreenSevenState extends State<OnboardingScreenSeven> {
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
-        physics: const BouncingScrollPhysics(),
+        physics: BouncingScrollPhysics(),
         child: Column(
           children: [
-            SizedBox(height: 20.h),
+            UIHelper.verticalSpace(20.h),
             Text(
               "What’s your height?",
               style: TextFontStyle.txtfontstyle24w700c212121,
             ),
-            SizedBox(height: 25.h),
+            SizedBox(height: 60.h),
             Container(
               padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
@@ -76,7 +76,7 @@ class _OnboardingScreenSevenState extends State<OnboardingScreenSeven> {
                 ],
               ),
             ),
-            SizedBox(height: 40.h),
+            UIHelper.verticalSpace(30.h),
 
             SizedBox(
               height: 0.5.sh,
@@ -135,7 +135,6 @@ class _OnboardingScreenSevenState extends State<OnboardingScreenSeven> {
                               isMajor = (cm % 10 == 0);
                               if (isMajor) text = "$cm";
                             }
-
                             return Container(
                               alignment: Alignment.centerLeft,
                               child: Row(
@@ -200,9 +199,9 @@ class _OnboardingScreenSevenState extends State<OnboardingScreenSeven> {
                   ),
 
                   Positioned(
-                    top: 0,
-                    left: 0,
-                    right: 0,
+                    top: 0.h,
+                    left: 0.w,
+                    right: 0.w,
                     child: RichText(
                       textAlign: TextAlign.center,
                       text: TextSpan(
