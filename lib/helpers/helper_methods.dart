@@ -216,7 +216,7 @@ void showMaterialDialog(BuildContext context) {
           height: 30.sp,
           minWidth: .3.sw,
           borderRadius: 30.r,
-          color: AppColors.primarycolor,
+          color: AppColors.primaryColor,
           textStyle: GoogleFonts.inter(
             fontSize: 17.sp,
             color: Colors.white,
@@ -236,7 +236,7 @@ void showMaterialDialog(BuildContext context) {
           height: 30.sp,
           minWidth: .3.sw,
           borderRadius: 30.r,
-          color: AppColors.primarycolor,
+          color: Colors.deepOrange,
           textStyle: GoogleFonts.inter(
             fontSize: 17.sp,
             color: Colors.white,

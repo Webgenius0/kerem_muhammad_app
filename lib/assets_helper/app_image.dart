@@ -10,4 +10,5 @@ class AppImages {
   static const String onboardingThree = '$basepathImg/onboardingthree.png';
   static const String human = '$basepathImg/human.png';
   static const String dedicated = '$basepathImg/dedicated.png';
+  static const String onboardingsix = '$basepathImg/onboardingsix.png';
 }

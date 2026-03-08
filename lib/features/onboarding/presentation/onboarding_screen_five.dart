@@ -51,81 +51,84 @@ class _OnboardingScreenFiveState extends State<OnboardingScreenFive> {
         currentStep: '5',
         svgimg: AppIcons.arrowleft,
       ),
-      body: Column(
-        children: [
-          UIHelper.verticalSpace(20.h),
-          CustomOnboardingFiveTextWidget(),
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          children: [
+            UIHelper.verticalSpace(20.h),
+            const CustomOnboardingFiveTextWidget(),
 
-          UIHelper.verticalSpace(40.h),
-          Expanded(
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                /// Year wheel
-                ListWheelScrollView.useDelegate(
-                  controller: _scrollController,
-                  itemExtent: 70.h,
-                  diameterRatio: 100,
-                  perspective: 0.001,
-                  physics: const BouncingScrollPhysics(),
-                  onSelectedItemChanged: (index) {
-                    setState(() {
-                      selectedIndex = index;
-                    });
-                  },
-                  childDelegate: ListWheelChildBuilderDelegate(
-                    childCount: years.length,
-                    builder: (context, index) {
-                      if (index == selectedIndex) {
-                        return const SizedBox.shrink();
-                      }
-                      return Center(
-                        child: Text(
-                          years[index].toString(),
-                          style: _yearStyle(index),
-                        ),
-                      );
+            UIHelper.verticalSpace(40.h),
+
+            SizedBox(
+              height: 300.h,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  ListWheelScrollView.useDelegate(
+                    controller: _scrollController,
+                    itemExtent: 70.h,
+                    diameterRatio: 100,
+                    perspective: 0.001,
+                    physics: const BouncingScrollPhysics(),
+                    onSelectedItemChanged: (index) {
+                      setState(() {
+                        selectedIndex = index;
+                      });
                     },
-                  ),
-                ),
-
-                IgnorePointer(
-                  child: Container(
-                    height: 70.h,
-                    margin: EdgeInsets.symmetric(horizontal: 24.w),
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade200.withAlpha(80),
-                      borderRadius: BorderRadius.circular(12.r),
+                    childDelegate: ListWheelChildBuilderDelegate(
+                      childCount: years.length,
+                      builder: (context, index) {
+                        if (index == selectedIndex)
+                          return const SizedBox.shrink();
+                        return Center(
+                          child: Text(
+                            years[index].toString(),
+                            style: _yearStyle(index),
+                          ),
+                        );
+                      },
                     ),
                   ),
-                ),
 
-                Text(
-                  years[selectedIndex].toString(),
-                  style: _yearStyle(selectedIndex),
-                ),
-              ],
+                  IgnorePointer(
+                    child: Container(
+                      height: 70.h,
+                      margin: EdgeInsets.symmetric(horizontal: 24.w),
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade200.withAlpha(80),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                    ),
+                  ),
+
+                  Text(
+                    years[selectedIndex].toString(),
+                    style: _yearStyle(selectedIndex),
+                  ),
+                ],
+              ),
             ),
-          ),
 
-          UIHelper.verticalSpace(120.h),
+            UIHelper.verticalSpace(120.h),
 
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.w),
-            child: CustomButtonprimary(
-              title: 'Next',
-              onTap: () {
-                int selectedYear = years[selectedIndex];
-                debugPrint("Selected Year: $selectedYear");
-                NavigationService.navigateTo(Routes.onboardingScreenSix);
-              },
-              buttonColor: AppColors.primaryColor,
-              textColor: AppColors.cFFFFFF,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.w),
+              child: CustomButtonprimary(
+                title: 'Next',
+                onTap: () {
+                  int selectedYear = years[selectedIndex];
+                  debugPrint("Selected Year: $selectedYear");
+                  NavigationService.navigateTo(Routes.onboardingScreenSix);
+                },
+                buttonColor: AppColors.primaryColor,
+                textColor: AppColors.cFFFFFF,
+              ),
             ),
-          ),
 
-          UIHelper.verticalspace32,
-        ],
+            UIHelper.verticalspace32,
+          ],
+        ),
       ),
     );
   }
