@@ -130,4 +130,15 @@ class TextFontStyle {
     fontSize: 17.sp,
     fontWeight: FontWeight.w400,
   );
+  static final txtfontstyle35w800c111214 = GoogleFonts.montserrat(
+    color: AppColors.c111214,
+    fontSize: 35.sp,
+    fontWeight: FontWeight.w800,
+  );
+
+  static final txtfontstyle36w400c676C75 = GoogleFonts.montserrat(
+    color: AppColors.c676C75,
+    fontSize: 36.sp,
+    fontWeight: FontWeight.w400,
+  );
 }

@@ -7,7 +7,6 @@ import 'package:kerem_muhammad_app/common_widgets/custom_app_bar_onboarding.dart
 import 'package:kerem_muhammad_app/common_widgets/custom_button_primary.dart';
 import 'package:kerem_muhammad_app/constants/text_font_style.dart';
 import 'package:kerem_muhammad_app/helpers/all_routes.dart';
-import 'package:kerem_muhammad_app/helpers/helper_methods.dart';
 import 'package:kerem_muhammad_app/helpers/navigation_service.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
