@@ -47,7 +47,9 @@ class _OnboardingScreenFiveState extends State<OnboardingScreenFive> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBarOnboarding(
-        onTap: () => NavigationService.goBack(),
+        onTap: () {
+          NavigationService.goBack;
+        },
         currentStep: '5',
         svgimg: AppIcons.arrowleft,
       ),

@@ -12,4 +12,5 @@ class AppIcons {
   static const String male = '$basepathIcon/male.svg';
   static const String other = '$basepathIcon/other.svg';
   static const String human = '$basepathIcon/human.svg';
+  static const String orangestick = '$basepathIcon/orangestick.svg';
 }
