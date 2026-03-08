@@ -94,7 +94,7 @@ class _OnboardingScreenNineState extends State<OnboardingScreenNine> {
               ),
             ),
 
-            UIHelper.verticalSpace(60.h),
+            UIHelper.verticalSpace(40.h),
 
             Container(
               padding: EdgeInsets.symmetric(horizontal: 28.w, vertical: 16.h),
@@ -226,7 +226,7 @@ class _OnboardingScreenNineState extends State<OnboardingScreenNine> {
               ),
             ),
 
-            UIHelper.verticalSpace(140.h),
+            UIHelper.verticalSpace(100.h),
 
             Padding(
               padding: EdgeInsets.all(24.r),
@@ -240,6 +240,8 @@ class _OnboardingScreenNineState extends State<OnboardingScreenNine> {
                 textColor: AppColors.cFFFFFF,
               ),
             ),
+
+            UIHelper.verticalspace32,
           ],
         ),
       ),
