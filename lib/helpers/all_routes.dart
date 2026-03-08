@@ -5,9 +5,13 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:kerem_muhammad_app/features/auth/login_sign_up/presentation/login_sign_up_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/get_started_screen.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_eight.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_five.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_four.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_nine.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_one.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_seven.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_six.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_three.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/oneboarding_screen_two.dart';
 import 'package:kerem_muhammad_app/navigation_screen.dart';
@@ -26,6 +30,10 @@ final class Routes {
   static const String onboardingScreenThree = '/onboardingScreenThree';
   static const String onboardingScreenFour = '/onboardingScreenFour';
   static const String onboardingScreenFive = '/onboardingScreenFive';
+  static const String onboardingScreenSix = '/onboardingScreenSix';
+  static const String onboardingScreenSeven = '/onboardingScreenSeven';
+  static const String onboardingScreenEight = '/onboardingScreenEight';
+  static const String onboardingScreenNine = '/onboardingScreenNine';
 }
 
 final class RouteGenerator {
@@ -110,6 +118,42 @@ final class RouteGenerator {
               )
             : CupertinoPageRoute(
                 builder: (context) => const OnboardingScreenFive(),
+              );
+      case Routes.onboardingScreenSix:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenSix()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenSix(),
+              );
+      case Routes.onboardingScreenSeven:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenSeven()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenSeven(),
+              );
+      case Routes.onboardingScreenEight:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenEight()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenEight(),
+              );
+      case Routes.onboardingScreenNine:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenNine()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenNine(),
               );
 
       default:

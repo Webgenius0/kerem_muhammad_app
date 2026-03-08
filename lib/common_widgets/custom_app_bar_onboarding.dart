@@ -12,6 +12,8 @@ class CustomAppBarOnboarding extends StatelessWidget
   final String? svgimg;
   final VoidCallback onTap;
   final String currentStep;
+  final String? righttitleText;
+  final VoidCallback? onTapSkip;
 
   const CustomAppBarOnboarding({
     super.key,
@@ -19,6 +21,8 @@ class CustomAppBarOnboarding extends StatelessWidget
     this.svgimg,
     required this.onTap,
     required this.currentStep,
+    this.righttitleText,
+    this.onTapSkip,
   });
 
   @override
@@ -71,6 +75,18 @@ class CustomAppBarOnboarding extends StatelessWidget
               ),
             ),
           ),
+
+          if (righttitleText != null)
+            Align(
+              alignment: Alignment.centerRight,
+              child: GestureDetector(
+                onTap: onTapSkip,
+                child: Text(
+                  righttitleText!,
+                  style: TextFontStyle.txtfontstyle17w400c212121,
+                ),
+              ),
+            ),
         ],
       ),
     );
