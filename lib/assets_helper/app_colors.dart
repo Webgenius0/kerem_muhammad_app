@@ -24,8 +24,8 @@ class AppColors {
   static const Color ccFF57225percent = Color(0x0DFF5722);
   static const Color c252D48 = Color(0xFF252D48);
   static const Color c9EA0A5 = Color(0xFF9EA0A5);
-  // static const Color c1D122D = Color(0xFF1D122D);
-  // static const Color c1D122D = Color(0xFF1D122D);
-  // static const Color c1D122D = Color(0xFF1D122D);
-  // static const Color c1D122D = Color(0xFF1D122D);
+  static const Color c808080 = Color(0xFF808080);
+  static const Color cDDDDDD = Color(0xFFDDDDDD);
+  static const Color c111214 = Color(0xFF111214);
+  static const Color c676C75 = Color(0xFF676C75);
 }
