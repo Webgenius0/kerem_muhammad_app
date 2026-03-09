@@ -195,4 +195,47 @@ class TextFontStyle {
     fontSize: 18.sp,
     fontWeight: FontWeight.w700,
   );
+
+  static final txtfontstyle15w600cFFFFFworksans = GoogleFonts.workSans(
+    color: AppColors.cFFFFFF,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w600,
+  );
+  static final txtfontstyle15w600c0000worksans = GoogleFonts.workSans(
+    color: AppColors.c000000,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static final txtfontstyle13w400c5C5C5Cworksans = GoogleFonts.workSans(
+    color: AppColors.c5C5C5C,
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static final txtfontstyle16w600c000000worksans = GoogleFonts.workSans(
+    color: AppColors.c000000,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+  );
+  static final txtfontstyle12w500c786F6Fworksans = GoogleFonts.workSans(
+    color: AppColors.c786F6F,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+  );
+
+  static final txtfontstyle13w700c000000 = GoogleFonts.montserrat(
+    color: AppColors.c000000,
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static final txtfontstyle16w500c737373Fworksans = GoogleFonts.workSans(
+    color: AppColors.c737373,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+  );
+  static final txtfontstyle10w500c000000 = GoogleFonts.montserrat(
+    color: AppColors.c000000,
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w500,
+  );
 }

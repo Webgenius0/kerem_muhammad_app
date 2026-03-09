@@ -48,20 +48,18 @@ class _OnboardingScreenTwelveState extends State<OnboardingScreenTwelve> {
             UIHelper.verticalSpace(48.h),
             Padding(
               padding: EdgeInsets.only(right: 20.w, left: 20.w),
-              child: Expanded(
-                child: ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: 3,
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return CustomPositiveFeedbacksCard(
-                      imageUrl:
-                          "https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
-                      name: 'Eleanor Pena',
-                      feedback: "FitForge is my dalily partner for stretching",
-                    );
-                  },
-                ),
+              child: ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: 3,
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  return CustomPositiveFeedbacksCard(
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+                    name: 'Eleanor Pena',
+                    feedback: "FitForge is my dalily partner for stretching",
+                  );
+                },
               ),
             ),
             UIHelper.verticalSpace(60.h),

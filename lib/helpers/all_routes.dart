@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:kerem_muhammad_app/features/auth/login_sign_up/presentation/login_sign_up_screen.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/creating_your_programs_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/get_started_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/long_term_result_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_eight.dart';
@@ -44,6 +45,8 @@ final class Routes {
   static const String onboardingScreenTwelve = '/onboardingScreenTwelve';
   static const String lognTermsResult = '/lognTermsResult';
   static const String paywalScreen = '/paywalScreen';
+  static const String creatingYourProgramsScreen =
+      '/creatingYourProgramsScreen';
 }
 
 final class RouteGenerator {
@@ -223,6 +226,16 @@ final class RouteGenerator {
                 settings: settings,
               )
             : CupertinoPageRoute(builder: (context) => const PaywalScreen());
+
+      case Routes.creatingYourProgramsScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: CreatingYourProgramsScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const CreatingYourProgramsScreen(),
+              );
 
       default:
         return null;
