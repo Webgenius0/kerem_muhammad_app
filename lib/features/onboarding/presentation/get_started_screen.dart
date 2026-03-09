@@ -47,6 +47,8 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
               buttonColor: AppColors.primaryColor,
               textColor: AppColors.cFFFFFF,
             ),
+
+            UIHelper.verticalspace32,
           ],
         ),
       ),

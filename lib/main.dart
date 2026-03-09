@@ -13,7 +13,9 @@ import 'package:kerem_muhammad_app/constants/app_constants.dart';
 import 'package:kerem_muhammad_app/constants/custome_theme.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_eight.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_five.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_nine.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_one.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_ten.dart';
 import 'package:kerem_muhammad_app/helpers/all_routes.dart';
 import 'package:kerem_muhammad_app/helpers/di.dart';
 import 'package:kerem_muhammad_app/helpers/helper_methods.dart';
@@ -113,7 +115,7 @@ class UtillScreenMobile extends StatelessWidget {
             },
             navigatorKey: NavigationService.navigatorKey,
             onGenerateRoute: RouteGenerator.generateRoute,
-            home: const Loading(),
+            home: const OnboardingScreenNine(),
           ),
         );
       },

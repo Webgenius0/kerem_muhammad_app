@@ -41,7 +41,6 @@ class _OnboardingScreenNineState extends State<OnboardingScreenNine> {
     double offset = _scrollController.offset;
     int index = (offset / _itemWidth).round();
 
-    // 2. Simplified logic: only update kg
     int newVal = (minKg + index).clamp(minKg, maxKg);
     if (newVal != kgValue) {
       setState(() {
@@ -148,7 +147,6 @@ class _OnboardingScreenNineState extends State<OnboardingScreenNine> {
 
             UIHelper.verticalSpace(40.h),
 
-            // Ruler Picker
             SizedBox(
               height: 140.h,
               child: Stack(
@@ -234,7 +232,7 @@ class _OnboardingScreenNineState extends State<OnboardingScreenNine> {
                 title: "Next",
                 onTap: () {
                   log("Final Selection -> $kgValue kg");
-                  NavigationService.navigateTo(Routes.onboardingScreenNine);
+                  NavigationService.navigateTo(Routes.onboardingScreenTen);
                 },
                 buttonColor: AppColors.primaryColor,
                 textColor: AppColors.cFFFFFF,
