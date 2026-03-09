@@ -68,7 +68,6 @@ class _PaywalScreenState extends State<PaywalScreen> {
               ),
               height: 320.h,
               child: SizedBox(
-                height: 320.h,
                 child: PageView.builder(
                   controller: pageController,
                   itemCount: AppList().journeyCardlist.length,
