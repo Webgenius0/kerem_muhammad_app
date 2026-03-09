@@ -232,6 +232,8 @@ class _OnboardingScreenEightState extends State<OnboardingScreenEight> {
                 textColor: AppColors.cFFFFFF,
               ),
             ),
+
+            UIHelper.verticalspace32,
           ],
         ),
       ),

@@ -13,4 +13,7 @@ class AppIcons {
   static const String other = '$basepathIcon/other.svg';
   static const String human = '$basepathIcon/human.svg';
   static const String orangestick = '$basepathIcon/orangestick.svg';
+  static const String never = '$basepathIcon/never.svg';
+  static const String now = '$basepathIcon/now.svg';
+  static const String wayback = '$basepathIcon/wayback';
 }

@@ -5,14 +5,18 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:kerem_muhammad_app/features/auth/login_sign_up/presentation/login_sign_up_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/get_started_screen.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/long_term_result_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_eight.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_eleven.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_five.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_four.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_nine.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_one.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_seven.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_six.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_ten.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_three.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_twelve.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/oneboarding_screen_two.dart';
 import 'package:kerem_muhammad_app/navigation_screen.dart';
 
@@ -34,6 +38,10 @@ final class Routes {
   static const String onboardingScreenSeven = '/onboardingScreenSeven';
   static const String onboardingScreenEight = '/onboardingScreenEight';
   static const String onboardingScreenNine = '/onboardingScreenNine';
+  static const String onboardingScreenTen = '/onboardingScreenTen';
+  static const String onboardingScreenEleven = '/onboardingScreenEleven';
+  static const String onboardingScreenTwelve = '/onboardingScreenTwelve';
+  static const String lognTermsResult = '/lognTermsResult';
 }
 
 final class RouteGenerator {
@@ -154,6 +162,56 @@ final class RouteGenerator {
               )
             : CupertinoPageRoute(
                 builder: (context) => const OnboardingScreenNine(),
+              );
+
+      case Routes.onboardingScreenNine:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenNine()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenNine(),
+              );
+
+      case Routes.onboardingScreenTen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenTen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenTen(),
+              );
+
+      case Routes.onboardingScreenEleven:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenEleven()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenEleven(),
+              );
+
+      case Routes.onboardingScreenTwelve:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: OnboardingScreenTwelve()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const OnboardingScreenTwelve(),
+              );
+
+      case Routes.lognTermsResult:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: LongTermResultScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const LongTermResultScreen(),
               );
 
       default:
