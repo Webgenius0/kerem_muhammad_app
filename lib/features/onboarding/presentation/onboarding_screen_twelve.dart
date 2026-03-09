@@ -6,6 +6,7 @@ import 'package:kerem_muhammad_app/common_widgets/custom_app_bar_onboarding.dart
 import 'package:kerem_muhammad_app/common_widgets/custom_button_primary.dart';
 import 'package:kerem_muhammad_app/constants/text_font_style.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/widget/custom_positive_feedbacks_card.dart';
+import 'package:kerem_muhammad_app/helpers/all_routes.dart';
 import 'package:kerem_muhammad_app/helpers/navigation_service.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
@@ -27,7 +28,9 @@ class _OnboardingScreenTwelveState extends State<OnboardingScreenTwelve> {
         currentStep: '12',
         svgimg: AppIcons.arrowleft,
         righttitleText: 'Skip',
-        onTapSkip: () {},
+        onTapSkip: () {
+          NavigationService.navigateTo(Routes.paywalScreen);
+        },
       ),
 
       body: SingleChildScrollView(
@@ -61,17 +64,18 @@ class _OnboardingScreenTwelveState extends State<OnboardingScreenTwelve> {
                 ),
               ),
             ),
-            UIHelper.verticalSpace(40.h),
+            UIHelper.verticalSpace(60.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: CustomButtonprimary(
                 title: 'Allow now',
-                onTap: () {},
+                onTap: () {
+                  NavigationService.navigateTo(Routes.paywalScreen);
+                },
                 buttonColor: AppColors.primaryColor,
                 textColor: AppColors.cFFFFFF,
               ),
             ),
-
             UIHelper.verticalspace32,
           ],
         ),

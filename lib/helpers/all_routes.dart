@@ -18,6 +18,7 @@ import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_s
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_three.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_twelve.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/oneboarding_screen_two.dart';
+import 'package:kerem_muhammad_app/features/onboarding/presentation/paywal_screen.dart';
 import 'package:kerem_muhammad_app/navigation_screen.dart';
 
 final class Routes {
@@ -42,6 +43,7 @@ final class Routes {
   static const String onboardingScreenEleven = '/onboardingScreenEleven';
   static const String onboardingScreenTwelve = '/onboardingScreenTwelve';
   static const String lognTermsResult = '/lognTermsResult';
+  static const String paywalScreen = '/paywalScreen';
 }
 
 final class RouteGenerator {
@@ -213,6 +215,14 @@ final class RouteGenerator {
             : CupertinoPageRoute(
                 builder: (context) => const LongTermResultScreen(),
               );
+
+      case Routes.paywalScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: PaywalScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(builder: (context) => const PaywalScreen());
 
       default:
         return null;

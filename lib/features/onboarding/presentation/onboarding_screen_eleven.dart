@@ -100,7 +100,7 @@ class _OnboardingScreenElevenState extends State<OnboardingScreenEleven> {
                   ? AppColors.ccFF57225percent
                   : AppColors.cF5F5F5,
               title: '0.8 kg',
-              image: AppImages.guava,
+              image: AppImages.watermelon,
             ),
 
             UIHelper.verticalspace16,
@@ -116,7 +116,7 @@ class _OnboardingScreenElevenState extends State<OnboardingScreenEleven> {
                   ? AppColors.ccFF57225percent
                   : AppColors.cF5F5F5,
               title: '1.2 kg',
-              image: AppImages.guava,
+              image: AppImages.apple,
             ),
 
             UIHelper.verticalspace16,
@@ -132,7 +132,7 @@ class _OnboardingScreenElevenState extends State<OnboardingScreenEleven> {
                   ? AppColors.ccFF57225percent
                   : AppColors.cF5F5F5,
               title: '1.6 kg',
-              image: AppImages.guava,
+              image: AppImages.avocard,
             ),
 
             UIHelper.verticalSpace(46.h),
