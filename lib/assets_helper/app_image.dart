@@ -14,4 +14,9 @@ class AppImages {
   static const String never = '$basepathImg/never.png';
   static const String now = '$basepathImg/now.png';
   static const String wayback = '$basepathImg/wayback.png';
+  static const String apple = '$basepathImg/apple.png';
+  static const String avocard = '$basepathImg/avocard.png';
+  static const String guava = '$basepathImg/guava.png';
+  static const String watermelon = '$basepathImg/watermelon.png';
+  static const String longtermimg = '$basepathImg/longtermimg.png';
 }

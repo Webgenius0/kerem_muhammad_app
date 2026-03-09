@@ -55,7 +55,7 @@ class _OnboardingScreenThreeState extends State<OnboardingScreenThree> {
               decoration: BoxDecoration(
                 color: AppColors.cFFFFFF,
                 borderRadius: BorderRadius.circular(8.r),
-                border: Border.all(color: AppColors.c212121, width: 1.w),
+                border: Border.all(color: AppColors.c212121, width: 1.5.w),
               ),
               padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 6.h),
               child: Text(
