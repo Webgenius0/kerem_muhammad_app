@@ -8,6 +8,8 @@ import 'package:kerem_muhammad_app/constants/text_font_style.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/widget/custom_paywal_journey_card.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/widget/cutom_fitforgethelp_them_text.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/widget/paywalone_top_text_widget.dart';
+import 'package:kerem_muhammad_app/helpers/all_routes.dart';
+import 'package:kerem_muhammad_app/helpers/navigation_service.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -57,7 +59,7 @@ class _PaywalScreenState extends State<PaywalScreen> {
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withAlpha(09),
+                    color: Colors.black.withAlpha(20),
                     blurRadius: 20,
                     spreadRadius: 0,
                     offset: const Offset(0, 2),
@@ -308,7 +310,11 @@ class _PaywalScreenState extends State<PaywalScreen> {
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: CustomButtonprimary(
                 title: 'START MY JOURNEY',
-                onTap: () {},
+                onTap: () {
+                  NavigationService.navigateTo(
+                    Routes.creatingYourProgramsScreen,
+                  );
+                },
                 buttonColor: AppColors.primaryColor,
                 textColor: AppColors.cFFFFFF,
               ),
