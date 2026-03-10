@@ -23,4 +23,6 @@ class AppIcons {
   static const String profile = '$basepathIcon/profile.svg';
   static const String progress = '$basepathIcon/progress.svg';
   static const String workout = '$basepathIcon/workout.svg';
+  static const String robo = '$basepathIcon/robo.svg';
+  static const String reward = '$basepathIcon/reward.svg';
 }
