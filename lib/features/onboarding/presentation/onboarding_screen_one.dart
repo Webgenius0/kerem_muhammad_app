@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_icons.dart';
 import 'package:kerem_muhammad_app/common_widgets/custom_app_bar_onboarding.dart';
 import 'package:kerem_muhammad_app/constants/text_font_style.dart';
@@ -19,6 +20,7 @@ class _OnboardingScreenOneState extends State<OnboardingScreenOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
       appBar: CustomAppBarOnboarding(
         onTap: () {
           NavigationService.goBack;
@@ -26,6 +28,7 @@ class _OnboardingScreenOneState extends State<OnboardingScreenOne> {
         svgimg: AppIcons.arrowleft,
         currentStep: '1',
       ),
+
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 16.w),
         physics: BouncingScrollPhysics(),

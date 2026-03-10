@@ -38,6 +38,7 @@ class _OneboardingScreenTwoState extends State<OneboardingScreenTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
       appBar: CustomAppBarOnboarding(
         onTap: () {
           NavigationService.goBack;
@@ -45,6 +46,7 @@ class _OneboardingScreenTwoState extends State<OneboardingScreenTwo> {
         currentStep: '2',
         svgimg: AppIcons.arrowleft,
       ),
+
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         physics: BouncingScrollPhysics(),

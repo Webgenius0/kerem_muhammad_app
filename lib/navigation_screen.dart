@@ -122,8 +122,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(24.r),
-            bottomLeft: Radius.circular(24.r),
+            topLeft: Radius.circular(16.r),
+            bottomLeft: Radius.circular(16.r),
           ),
         ),
         child: Column(
@@ -138,7 +138,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
                   color: AppColors.cF7F8F9,
                 ),
                 child: Container(
-                  padding: EdgeInsets.all(14.w),
+                  padding: EdgeInsets.all(12.w),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: AppColors.primaryColor,
