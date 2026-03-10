@@ -4,6 +4,8 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:kerem_muhammad_app/features/auth/login_sign_up/presentation/login_sign_up_screen.dart';
+import 'package:kerem_muhammad_app/features/home/presentation/home_screen.dart';
+import 'package:kerem_muhammad_app/features/neutrition/presentation/neutrition_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/creating_your_programs_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/get_started_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/long_term_result_screen.dart';
@@ -20,6 +22,9 @@ import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_s
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_twelve.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/oneboarding_screen_two.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/paywal_screen.dart';
+import 'package:kerem_muhammad_app/features/profile/presentation/profile_screen.dart';
+import 'package:kerem_muhammad_app/features/progress/presentation/progress_screen.dart';
+import 'package:kerem_muhammad_app/features/workout/presentation/workout_screen.dart';
 import 'package:kerem_muhammad_app/navigation_screen.dart';
 
 final class Routes {
@@ -47,6 +52,20 @@ final class Routes {
   static const String paywalScreen = '/paywalScreen';
   static const String creatingYourProgramsScreen =
       '/creatingYourProgramsScreen';
+
+  //======================== home ===============================
+  static const String homeScreen = '/homeScreen';
+  //======================== workout =============================
+  static const String workoutScreen = '/workoutScreen';
+
+  //======================== neutrition =============================
+  static const String neutritionScreen = '/neutritionScreen';
+
+  //======================== progress =============================
+  static const String progressScreen = '/progressScreen';
+
+  //======================== prorile =============================
+  static const String profileScreen = '/profileScreen';
 }
 
 final class RouteGenerator {
@@ -236,6 +255,48 @@ final class RouteGenerator {
             : CupertinoPageRoute(
                 builder: (context) => const CreatingYourProgramsScreen(),
               );
+
+      case Routes.homeScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: HomeScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(builder: (context) => const HomeScreen());
+
+      case Routes.workoutScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: WorkoutScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(builder: (context) => const WorkoutScreen());
+
+      case Routes.neutritionScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: NeutritionScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const NeutritionScreen(),
+              );
+
+      case Routes.progressScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: ProgressScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(builder: (context) => const ProgressScreen());
+
+      case Routes.profileScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: ProfileScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(builder: (context) => const ProfileScreen());
 
       default:
         return null;

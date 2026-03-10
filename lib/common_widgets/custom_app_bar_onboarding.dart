@@ -11,7 +11,7 @@ class CustomAppBarOnboarding extends StatelessWidget
     implements PreferredSizeWidget {
   final String? svgimg;
   final VoidCallback onTap;
-  final String currentStep;
+  final String? currentStep;
   final String? righttitleText;
   final VoidCallback? onTapSkip;
 
@@ -20,7 +20,7 @@ class CustomAppBarOnboarding extends StatelessWidget
 
     this.svgimg,
     required this.onTap,
-    required this.currentStep,
+    this.currentStep,
     this.righttitleText,
     this.onTapSkip,
   });

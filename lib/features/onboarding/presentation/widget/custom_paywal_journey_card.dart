@@ -37,7 +37,6 @@ class CustomPaywalJourneyCard extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10.w),
         child: Container(
-          width: 290.w,
           decoration: BoxDecoration(
             color: AppColors.cFFFFFF,
             borderRadius: BorderRadius.circular(16.r),

@@ -17,4 +17,10 @@ class AppIcons {
   static const String now = '$basepathIcon/now.svg';
   static const String wayback = '$basepathIcon/wayback';
   static const String star = '$basepathIcon/star.svg';
+  static const String done = '$basepathIcon/done.svg';
+  static const String home = '$basepathIcon/home.svg';
+  static const String neutrition = '$basepathIcon/neutrition.svg';
+  static const String profile = '$basepathIcon/profile.svg';
+  static const String progress = '$basepathIcon/progress.svg';
+  static const String workout = '$basepathIcon/workout.svg';
 }

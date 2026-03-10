@@ -44,7 +44,7 @@ class _PaywalScreenState extends State<PaywalScreen> {
         physics: BouncingScrollPhysics(),
         child: Column(
           children: [
-            UIHelper.verticalSpace(50.h),
+            UIHelper.verticalSpace(60.h),
             PaywaloneTopTextWidget(),
             UIHelper.verticalSpace(34.h),
 
@@ -67,39 +67,33 @@ class _PaywalScreenState extends State<PaywalScreen> {
                 ],
               ),
               height: 320.h,
-              child: SizedBox(
-                child: PageView.builder(
-                  controller: pageController,
-                  itemCount: AppList().journeyCardlist.length,
-                  itemBuilder: (context, index) {
-                    final card = AppList().journeyCardlist[index];
-                    return Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10.w),
-                      child: CustomPaywalJourneyCard(
-                        onTap: () {},
-                        imageUrl: card['imageUrl'],
-                        name: card['name'],
-                        subtitle: card['subtitle'],
-                        ratingone: card['rating'] == '5' ? AppIcons.star : null,
-                        ratingtwo: card['rating'] == '5' ? AppIcons.star : null,
-                        ratingthree: card['rating'] == '5'
-                            ? AppIcons.star
-                            : null,
-                        ratingfour: card['rating'] == '5'
-                            ? AppIcons.star
-                            : null,
-                        ratingfive: card['rating'] == '5'
-                            ? AppIcons.star
-                            : null,
-                      ),
-                    );
-                  },
-                ),
+              child: PageView.builder(
+                controller: pageController,
+                itemCount: AppList().journeyCardlist.length,
+                itemBuilder: (context, index) {
+                  final card = AppList().journeyCardlist[index];
+                  return Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10.w),
+                    child: CustomPaywalJourneyCard(
+                      onTap: () {
+                        NavigationService.navigateTo(
+                          Routes.creatingYourProgramsScreen,
+                        );
+                      },
+                      imageUrl: card['imageUrl'],
+                      name: card['name'],
+                      subtitle: card['subtitle'],
+                      ratingone: card['rating'] == '5' ? AppIcons.star : null,
+                      ratingtwo: card['rating'] == '5' ? AppIcons.star : null,
+                      ratingthree: card['rating'] == '5' ? AppIcons.star : null,
+                      ratingfour: card['rating'] == '5' ? AppIcons.star : null,
+                      ratingfive: card['rating'] == '5' ? AppIcons.star : null,
+                    ),
+                  );
+                },
               ),
             ),
-
             UIHelper.verticalSpace(20.h),
-
             SmoothPageIndicator(
               controller: pageController,
               count: AppList().journeyCardlist.length,
@@ -310,9 +304,7 @@ class _PaywalScreenState extends State<PaywalScreen> {
               child: CustomButtonprimary(
                 title: 'START MY JOURNEY',
                 onTap: () {
-                  NavigationService.navigateTo(
-                    Routes.creatingYourProgramsScreen,
-                  );
+                  NavigationService.navigateTo(Routes.navigatiseScreen);
                 },
                 buttonColor: AppColors.primaryColor,
                 textColor: AppColors.cFFFFFF,

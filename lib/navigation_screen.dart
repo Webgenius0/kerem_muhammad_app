@@ -4,8 +4,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_icons.dart';
 import 'package:kerem_muhammad_app/constants/text_font_style.dart';
+import 'package:kerem_muhammad_app/features/home/presentation/home_screen.dart';
+import 'package:kerem_muhammad_app/features/neutrition/presentation/neutrition_screen.dart';
+import 'package:kerem_muhammad_app/features/profile/presentation/profile_screen.dart';
+import 'package:kerem_muhammad_app/features/progress/presentation/progress_screen.dart';
+import 'package:kerem_muhammad_app/features/workout/presentation/workout_screen.dart';
 import 'package:kerem_muhammad_app/helpers/helper_methods.dart';
-import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
 class NavigationScreen extends StatefulWidget {
   final int? pageNum;
@@ -21,10 +25,11 @@ class _NavigationScreenState extends State<NavigationScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    // const CustomerHomeScreen(),
-    // const CustomerBookingScreen(),
-    // const CustomerServicesScreen(),
-    // const CustomerProfileScreen(),
+    const HomeScreen(),
+    const WorkoutScreen(),
+    const NeutritionScreen(),
+    const ProgressScreen(),
+    const ProfileScreen(),
   ];
   @override
   void initState() {
@@ -49,21 +54,10 @@ class _NavigationScreenState extends State<NavigationScreen> {
             padding: EdgeInsets.symmetric(horizontal: 12.w),
             decoration: BoxDecoration(
               color: AppColors.cFFFFFF,
-              boxShadow: [
-                BoxShadow(
-                  color: const Color(0x40A5A9AF),
-                  blurRadius: 30,
-                  spreadRadius: 0,
-                  blurStyle: BlurStyle.outer,
-                  offset: const Offset(10, 0),
-                ),
-              ],
+
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(24.r),
-                topRight: Radius.circular(24.r),
-              ),
-              border: Border(
-                top: BorderSide(color: AppColors.c1E2939, width: 1.h),
+                topLeft: Radius.circular(16.r),
+                topRight: Radius.circular(16.r),
               ),
             ),
             child: Row(
@@ -72,36 +66,38 @@ class _NavigationScreenState extends State<NavigationScreen> {
                 Expanded(
                   child: _buildNavItem(
                     0,
-                    _currentIndex == 0
-                        ? AppIcons.basepathIcon
-                        : AppIcons.basepathIcon,
+                    _currentIndex == 0 ? AppIcons.home : AppIcons.home,
                     'Home',
                   ),
                 ),
                 Expanded(
                   child: _buildNavItem(
                     1,
-                    _currentIndex == 1
-                        ? AppIcons.basepathIcon
-                        : AppIcons.basepathIcon,
-                    'Booking',
+                    _currentIndex == 1 ? AppIcons.workout : AppIcons.workout,
+                    'Workouts',
                   ),
                 ),
                 Expanded(
                   child: _buildNavItem(
                     2,
                     _currentIndex == 2
-                        ? AppIcons.basepathIcon
-                        : AppIcons.basepathIcon,
-                    'Services',
+                        ? AppIcons.neutrition
+                        : AppIcons.neutrition,
+                    'Nutrition',
                   ),
                 ),
                 Expanded(
                   child: _buildNavItem(
                     3,
-                    _currentIndex == 3
-                        ? AppIcons.basepathIcon
-                        : AppIcons.basepathIcon,
+                    _currentIndex == 3 ? AppIcons.progress : AppIcons.progress,
+                    'Progress',
+                  ),
+                ),
+
+                Expanded(
+                  child: _buildNavItem(
+                    4,
+                    _currentIndex == 4 ? AppIcons.profile : AppIcons.profile,
                     'Profile',
                   ),
                 ),
@@ -117,7 +113,12 @@ class _NavigationScreenState extends State<NavigationScreen> {
     final isSelected = _currentIndex == index;
 
     return GestureDetector(
-      onTap: () => setState(() => _currentIndex = index),
+      behavior: HitTestBehavior.opaque,
+      onTap: () {
+        setState(() {
+          _currentIndex = index;
+        });
+      },
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
@@ -126,25 +127,63 @@ class _NavigationScreenState extends State<NavigationScreen> {
           ),
         ),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(
-              iconPath,
-              colorFilter: ColorFilter.mode(
-                isSelected ? AppColors.primarycolor : AppColors.cFFFFFF,
-                BlendMode.srcIn,
+            if (isSelected)
+              Container(
+                padding: EdgeInsets.all(4.w),
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: AppColors.cF7F8F9,
+                ),
+                child: Container(
+                  padding: EdgeInsets.all(14.w),
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.primaryColor,
+                  ),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      iconPath,
+                      width: 24.w,
+                      height: 24.w,
+                      fit: BoxFit.contain,
+                      colorFilter: const ColorFilter.mode(
+                        AppColors.cFFFFFF,
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            else
+              // UNSELECTED STATE: Show just the icon and text
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SvgPicture.asset(
+                    iconPath,
+                    width: 24.w,
+                    height: 24.w,
+
+                    colorFilter: const ColorFilter.mode(
+                      AppColors.c676C75,
+                      BlendMode.srcIn,
+                    ),
+                  ),
+
+                  SizedBox(height: 6.h),
+
+                  Text(
+                    title,
+                    style: TextFontStyle.txtfontstyle12w500c676C75.copyWith(
+                      color: AppColors.c676C75,
+                      fontSize: 12.sp,
+                    ),
+                  ),
+                ],
               ),
-              width: 24.w,
-              height: 24.h,
-            ),
-            UIHelper.verticalSpace(4.h),
-            Text(
-              title,
-              style: TextFontStyle.txtfontstyle24w500primaryColor.copyWith(
-                color: isSelected ? AppColors.primarycolor : AppColors.cFFFFFF,
-                fontSize: 12.sp,
-              ),
-            ),
           ],
         ),
       ),
