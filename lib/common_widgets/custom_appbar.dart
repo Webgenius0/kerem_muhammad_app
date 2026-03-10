@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
 import 'package:kerem_muhammad_app/constants/text_font_style.dart';
-import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
@@ -27,28 +26,18 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
               alignment: Alignment.centerLeft,
               child: GestureDetector(
                 onTap: onTap,
-                child: Container(
-                  padding: EdgeInsets.all(10.sp),
-                  decoration: BoxDecoration(
-                    color: AppColors.primarycolor,
-                    borderRadius: BorderRadius.circular(200.r),
-                  ),
-                  child: SvgPicture.asset(
-                    svgimg!,
-                    height: 26.h,
-                    width: 26.w,
-                    colorFilter: ColorFilter.mode(
-                      AppColors.primarycolor,
-                      BlendMode.srcIn,
-                    ),
+                child: SvgPicture.asset(
+                  svgimg!,
+                  width: 20.w,
+                  height: 14.h,
+
+                  colorFilter: ColorFilter.mode(
+                    AppColors.c454545,
+                    BlendMode.srcIn,
                   ),
                 ),
               ),
             ),
-          Padding(
-            padding: EdgeInsets.only(top: 100.h),
-            child: UIHelper.customDivider(),
-          ),
 
           if (title != null)
             Center(
