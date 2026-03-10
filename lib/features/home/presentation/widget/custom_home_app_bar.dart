@@ -1,96 +1,116 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
-import 'package:kerem_muhammad_app/constants/text_font_style.dart';
+import 'package:kerem_muhammad_app/assets_helper/app_icons.dart';
+import 'package:kerem_muhammad_app/common_widgets/cached_network_image_widget.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
-class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String? svgimg;
-  final VoidCallback onTap;
-  final String? currentStep;
-  final String? righttitleText;
-  final VoidCallback? onTapSkip;
-
-  const CustomHomeAppBar({
+class CustomCustomerAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
+  const CustomCustomerAppBar({
     super.key,
-
-    this.svgimg,
-    required this.onTap,
-    this.currentStep,
-    this.righttitleText,
-    this.onTapSkip,
+    required this.imageurl,
+    required this.userName,
+    required this.message,
+    required this.onTapRewardicon,
+    required this.onTapRoboIcon,
   });
+
+  final String imageurl;
+  final String userName;
+  final String message;
+  final VoidCallback onTapRewardicon;
+  final VoidCallback onTapRoboIcon;
+
+  @override
+  Size get preferredSize => Size.fromHeight(120.h);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      backgroundColor: AppColors.cFFFFFF,
+      backgroundColor: AppColors.cF9FAFB,
       automaticallyImplyLeading: false,
-      title: Stack(
-        alignment: Alignment.center,
-        children: [
-          if (svgimg != null)
-            Align(
-              alignment: Alignment.centerLeft,
-              child: GestureDetector(
-                onTap: onTap,
-                child: SvgPicture.asset(
-                  svgimg!,
-                  width: 20.w,
-                  height: 14.h,
+      flexibleSpace: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Row(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(260.r),
+                      child: CachedNetworkImageWidget(
+                        imgUrl: imageurl,
+                        height: 40.h,
+                        width: 40.w,
+                      ),
+                    ),
+                    UIHelper.horizontalspace12,
 
-                  colorFilter: ColorFilter.mode(
-                    AppColors.c454545,
-                    BlendMode.srcIn,
-                  ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 4.h),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Hello, $userName",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16.sp,
+                              ),
+                            ),
+                            UIHelper.verticalSpace(4.h),
+                            Text(
+                              message,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 12.sp,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ),
 
-          Padding(
-            padding: EdgeInsets.only(top: 100.h),
-            child: UIHelper.customDivider(),
-          ),
-
-          Center(
-            child: Text.rich(
-              TextSpan(
-                text: 'Step ',
-                style: TextFontStyle.txtfontstyle16w700c212121,
-                children: <TextSpan>[
-                  TextSpan(
-                    text: '$currentStep ',
-                    style: TextFontStyle.txtfontstyle16w700c212121,
+              UIHelper.horizontalSpace(10.w),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  GestureDetector(
+                    onTap: onTapRoboIcon,
+                    child: _buildIconButton(AppIcons.robo, AppColors.cFF5722),
                   ),
-                  TextSpan(
-                    text: 'of 12',
-                    style: TextFontStyle.txtfontstyle16w400c5C5C5C,
+                  UIHelper.horizontalSpace(8.w),
+                  GestureDetector(
+                    onTap: onTapRewardicon,
+                    child: _buildIconButton(AppIcons.reward, AppColors.c1A1A7E),
                   ),
                 ],
               ),
-            ),
+            ],
           ),
-
-          if (righttitleText != null)
-            Align(
-              alignment: Alignment.centerRight,
-              child: GestureDetector(
-                onTap: onTapSkip,
-                child: Text(
-                  righttitleText!,
-                  style: TextFontStyle.txtfontstyle17w400c212121,
-                ),
-              ),
-            ),
-        ],
+        ),
       ),
     );
   }
 
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Widget _buildIconButton(String icon, Color bgColor) {
+    return Container(
+      decoration: BoxDecoration(shape: BoxShape.circle, color: bgColor),
+      padding: EdgeInsets.all(8.sp),
+      child: SvgPicture.asset(icon, height: 20.h, width: 20.w),
+    );
+  }
 }

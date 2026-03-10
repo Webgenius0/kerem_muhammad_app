@@ -121,9 +121,13 @@ class CustomPaywalJourneyCard extends StatelessWidget {
                     Row(
                       children: [
                         if (ratingone != null) SvgPicture.asset(ratingone!),
+                        UIHelper.horizontalSpace(6.h),
                         if (ratingtwo != null) SvgPicture.asset(ratingtwo!),
+                        UIHelper.horizontalSpace(6.h),
                         if (ratingthree != null) SvgPicture.asset(ratingthree!),
+                        UIHelper.horizontalSpace(6.h),
                         if (ratingfour != null) SvgPicture.asset(ratingfour!),
+                        UIHelper.horizontalSpace(6.h),
                         if (ratingfive != null) SvgPicture.asset(ratingfive!),
                       ],
                     ),
