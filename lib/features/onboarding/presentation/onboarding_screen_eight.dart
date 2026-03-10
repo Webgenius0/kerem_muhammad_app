@@ -96,6 +96,7 @@ class _OnboardingScreenEightState extends State<OnboardingScreenEight> {
     double centerPadding = (screenWidth / 2) - (_itemWidth / 2);
 
     return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
       appBar: CustomAppBarOnboarding(
         onTap: () {
           NavigationService.goBack;
@@ -103,6 +104,7 @@ class _OnboardingScreenEightState extends State<OnboardingScreenEight> {
         currentStep: '8',
         svgimg: AppIcons.arrowleft,
       ),
+
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(

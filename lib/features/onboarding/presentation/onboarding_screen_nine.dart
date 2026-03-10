@@ -72,6 +72,7 @@ class _OnboardingScreenNineState extends State<OnboardingScreenNine> {
     double centerPadding = (screenWidth / 2) - (_itemWidth / 2);
 
     return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
       appBar: CustomAppBarOnboarding(
         onTap: () {
           NavigationService.goBack;
@@ -79,6 +80,7 @@ class _OnboardingScreenNineState extends State<OnboardingScreenNine> {
         currentStep: '9',
         svgimg: AppIcons.arrowleft,
       ),
+
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(

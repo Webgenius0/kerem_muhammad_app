@@ -21,6 +21,7 @@ class _OnboardingScreenSixState extends State<OnboardingScreenSix> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
       appBar: CustomAppBarOnboarding(
         onTap: () {
           NavigationService.goBack;
@@ -32,6 +33,7 @@ class _OnboardingScreenSixState extends State<OnboardingScreenSix> {
         },
         righttitleText: 'skip',
       ),
+
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: Column(

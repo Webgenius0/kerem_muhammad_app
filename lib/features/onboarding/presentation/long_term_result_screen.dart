@@ -20,6 +20,7 @@ class _LongTermResultScreenState extends State<LongTermResultScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         physics: BouncingScrollPhysics(),

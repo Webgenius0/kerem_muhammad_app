@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -10,6 +11,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(backgroundColor: AppColors.cF9FAFB);
   }
 }

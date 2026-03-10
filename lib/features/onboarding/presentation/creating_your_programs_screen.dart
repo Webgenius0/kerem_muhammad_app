@@ -23,12 +23,15 @@ class _CreatingYourProgramsScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
+
       appBar: CustomAppbar(
         onTap: () {
           NavigationService.goBack;
         },
         svgimg: AppIcons.arrowleft,
       ),
+
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 16.w),
         physics: BouncingScrollPhysics(),

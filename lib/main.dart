@@ -104,7 +104,7 @@ class UtillScreenMobile extends StatelessWidget {
           child: GetMaterialApp(
             showPerformanceOverlay: false,
             theme: ThemeData(
-              scaffoldBackgroundColor: AppColors.cFFFFFF,
+              scaffoldBackgroundColor: AppColors.cF9FAFB,
               primarySwatch: CustomTheme.kToDark,
               useMaterial3: false,
             ),

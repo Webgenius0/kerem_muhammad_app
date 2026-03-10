@@ -21,6 +21,7 @@ class _OnboardingScreenThreeState extends State<OnboardingScreenThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
       appBar: CustomAppBarOnboarding(
         onTap: () {
           NavigationService.goBack;
@@ -28,6 +29,7 @@ class _OnboardingScreenThreeState extends State<OnboardingScreenThree> {
         svgimg: AppIcons.arrowleft,
         currentStep: '3',
       ),
+
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 16.w),
         physics: BouncingScrollPhysics(),

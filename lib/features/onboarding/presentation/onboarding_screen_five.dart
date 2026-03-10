@@ -46,6 +46,7 @@ class _OnboardingScreenFiveState extends State<OnboardingScreenFive> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
       appBar: CustomAppBarOnboarding(
         onTap: () {
           NavigationService.goBack;
@@ -53,6 +54,7 @@ class _OnboardingScreenFiveState extends State<OnboardingScreenFive> {
         currentStep: '5',
         svgimg: AppIcons.arrowleft,
       ),
+
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(

@@ -40,6 +40,7 @@ class _PaywalScreenState extends State<PaywalScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(

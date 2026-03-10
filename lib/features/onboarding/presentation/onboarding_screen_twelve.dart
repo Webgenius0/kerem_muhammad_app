@@ -21,6 +21,7 @@ class _OnboardingScreenTwelveState extends State<OnboardingScreenTwelve> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.cFFFFFF,
       appBar: CustomAppBarOnboarding(
         onTap: () {
           NavigationService.goBack;
