@@ -27,7 +27,7 @@ class CustomPositiveFeedbacksCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.r),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withAlpha(09),
+              color: Colors.black.withAlpha(32),
               offset: const Offset(0, 2),
               blurRadius: 20,
               spreadRadius: 0,

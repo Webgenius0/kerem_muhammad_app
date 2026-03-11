@@ -100,4 +100,26 @@ class AppList {
       'playIcon': AppIcons.pause,
     },
   ];
+
+  final List<Map<String, dynamic>> neutritionScheduleList = [
+    {'day': 'Mon', 'date': "8"},
+
+    {'day': 'Tue', 'date': "9"},
+
+    {'day': 'Wed', 'date': "10"},
+
+    {'day': 'Thr', 'date': "11"},
+
+    {'day': 'Fri', 'date': "12"},
+
+    {'day': 'Sat', 'date': "13"},
+
+    {'day': 'Sun', 'date': "14"},
+  ];
+
+  final List<String> neutritionFoodItems = [
+    "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEZvb2R8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Rm9vZHxlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEZvb2R8ZW58MHx8MHx8fDA%3D",
+  ];
 }

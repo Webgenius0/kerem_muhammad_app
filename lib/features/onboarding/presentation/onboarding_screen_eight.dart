@@ -212,10 +212,7 @@ class _OnboardingScreenEightState extends State<OnboardingScreenEight> {
                   ),
                   IgnorePointer(
                     child: Transform.translate(
-                      offset: Offset(
-                        0,
-                        -20.h,
-                      ), // Negative value moves it UPWARDS
+                      offset: Offset(0, -20.h),
                       child: SvgPicture.asset(
                         AppIcons.orangestick,
                         height: 100.h,

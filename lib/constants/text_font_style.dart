@@ -402,4 +402,10 @@ class TextFontStyle {
     fontSize: 48.sp,
     fontWeight: FontWeight.w800,
   );
+
+  static final txtfontstyle12w400c898989 = GoogleFonts.inter(
+    color: AppColors.c898989,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+  );
 }

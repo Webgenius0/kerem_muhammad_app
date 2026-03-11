@@ -73,7 +73,7 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
                         dotHeight: 6.h,
                         dotWidth: 6.w,
                         activeDotColor: AppColors.cFFFFFF,
-                        dotColor: AppColors.c0x1AD7D7D7,
+                        dotColor: Colors.white30,
                       ),
                     ),
                   ),
