@@ -27,4 +27,5 @@ class AppImages {
   static const String sitbench = '$basepathImg/sitbench.png';
   static const String squasts = '$basepathImg/squasts.png';
   static const String stretching = '$basepathImg/stretching.png';
+  static const String workouttimesplank = '$basepathImg/workouttimeplank.png';
 }

@@ -36,4 +36,5 @@ class AppIcons {
   static const String caloryColor = '$basepathIcon/calorycolor.svg';
   static const String avghr = '$basepathIcon/avghr.svg';
   static const String doneGreen = '$basepathIcon/donegreen.svg';
+  static const String resume = '$basepathIcon/resume.svg';
 }

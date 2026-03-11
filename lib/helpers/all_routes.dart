@@ -25,6 +25,7 @@ import 'package:kerem_muhammad_app/features/onboarding/presentation/paywal_scree
 import 'package:kerem_muhammad_app/features/profile/presentation/profile_screen.dart';
 import 'package:kerem_muhammad_app/features/progress/presentation/progress_screen.dart';
 import 'package:kerem_muhammad_app/features/workout/presentation/workout_screen.dart';
+import 'package:kerem_muhammad_app/features/workout/presentation/workouts_time_screen.dart';
 import 'package:kerem_muhammad_app/navigation_screen.dart';
 
 final class Routes {
@@ -57,6 +58,7 @@ final class Routes {
   static const String homeScreen = '/homeScreen';
   //======================== workout =============================
   static const String workoutScreen = '/workoutScreen';
+  static const String workoutsTimeScreen = '/workoutsTimeScreen';
 
   //======================== neutrition =============================
   static const String neutritionScreen = '/neutritionScreen';
@@ -297,6 +299,16 @@ final class RouteGenerator {
                 settings: settings,
               )
             : CupertinoPageRoute(builder: (context) => const ProfileScreen());
+
+      case Routes.workoutsTimeScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: WorkoutsTimeScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const WorkoutsTimeScreen(),
+              );
 
       default:
         return null;

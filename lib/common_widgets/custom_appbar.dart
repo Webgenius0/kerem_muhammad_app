@@ -10,13 +10,20 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final String? svgimg;
   final VoidCallback onTap;
-  const CustomAppbar({super.key, this.title, this.svgimg, required this.onTap});
+  final Color? appbarColor;
+  const CustomAppbar({
+    super.key,
+    this.title,
+    this.svgimg,
+    required this.onTap,
+    this.appbarColor,
+  });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      backgroundColor: AppColors.cFFFFFF,
+      backgroundColor: appbarColor,
       automaticallyImplyLeading: false,
       title: Stack(
         alignment: Alignment.center,

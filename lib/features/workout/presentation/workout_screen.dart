@@ -5,6 +5,8 @@ import 'package:kerem_muhammad_app/common_widgets/cached_network_image_widget.da
 import 'package:kerem_muhammad_app/common_widgets/custom_todays_training_card.dart';
 import 'package:kerem_muhammad_app/constants/app_list.dart';
 import 'package:kerem_muhammad_app/features/workout/presentation/widget/custom_today_workout_card_widget.dart';
+import 'package:kerem_muhammad_app/helpers/all_routes.dart';
+import 'package:kerem_muhammad_app/helpers/navigation_service.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -35,7 +37,7 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            UIHelper.verticalSpace(60.h),
+            UIHelper.verticalSpace(80.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Stack(
@@ -94,7 +96,6 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
                 padding: EdgeInsets.zero,
                 itemBuilder: (context, index) {
                   return CustomTodaysTrainingCard(
-                    // --- PASS THE SELECTION STATE HERE ---
                     isSelected: selectedIndex == index,
 
                     workoutImage: AppList().todaysWorkoutList[index]['image'],
@@ -105,9 +106,8 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
                     workoutminute:
                         AppList().todaysWorkoutList[index]['exerciseText'],
                     onTapPausePlay: () {
-                      selection(
-                        index,
-                      ); // This calls setState and rebuilds the list
+                      selection(index);
+                      NavigationService.navigateTo(Routes.workoutsTimeScreen);
                     },
                     donePauseIcon:
                         AppList().todaysWorkoutList[index]['playIcon'],
