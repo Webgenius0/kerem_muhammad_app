@@ -30,6 +30,7 @@ class _CreatingYourProgramsScreenState
           NavigationService.goBack;
         },
         svgimg: AppIcons.arrowleft,
+        appbarColor: AppColors.cFFFFFF,
       ),
 
       body: SingleChildScrollView(
