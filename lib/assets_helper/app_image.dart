@@ -22,4 +22,9 @@ class AppImages {
   static const String meditate = '$basepathImg/meditate.png';
   static const String plank = '$basepathImg/plank.png';
   static const String touchleg = '$basepathImg/touchleg.png';
+  static const String absworkout = '$basepathImg/absworkout.png';
+  static const String pikepushup = '$basepathImg/pikepushup.png';
+  static const String sitbench = '$basepathImg/sitbench.png';
+  static const String squasts = '$basepathImg/squasts.png';
+  static const String stretching = '$basepathImg/stretching.png';
 }

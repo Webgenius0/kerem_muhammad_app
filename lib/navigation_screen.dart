@@ -54,6 +54,14 @@ class _NavigationScreenState extends State<NavigationScreen> {
             padding: EdgeInsets.symmetric(horizontal: 12.w),
             decoration: BoxDecoration(
               color: AppColors.cFFFFFF,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withAlpha(20),
+                  offset: Offset(0, 4),
+                  blurRadius: 20,
+                  spreadRadius: 0,
+                ),
+              ],
 
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(16.r),

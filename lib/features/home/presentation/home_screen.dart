@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
+import 'package:kerem_muhammad_app/assets_helper/app_icons.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_image.dart';
+import 'package:kerem_muhammad_app/common_widgets/custom_todays_training_card.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_home_app_bar.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_progress_summary_card.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_streak_challanges_card.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_todays_meal_card.dart';
-import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_todays_training_card.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_todays_workout_card.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -54,7 +55,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     workoutName: 'Push-ups',
                     exerciseText: 'Exercises',
                     workoutminute: '1 min',
-                    onTapPause: () {},
+                    onTapPausePlay: () {},
+                    donePauseIcon: AppIcons.pause,
                   );
                 },
               ),
@@ -125,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     return LinearPercentIndicator(
                       padding: EdgeInsets.zero,
                       percent: value,
-                      lineHeight: 8.h,
+                      lineHeight: 4.h,
                       barRadius: Radius.circular(100.r),
                       backgroundColor: AppColors.cE7E7E7,
                       linearGradient: LinearGradient(

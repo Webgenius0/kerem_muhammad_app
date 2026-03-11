@@ -6,26 +6,24 @@ import 'package:kerem_muhammad_app/assets_helper/app_icons.dart';
 import 'package:kerem_muhammad_app/constants/text_font_style.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
-class CustomTodaysWorkoutCard extends StatelessWidget {
-  const CustomTodaysWorkoutCard({
+class CustomTodayWorkoutCardWidget extends StatelessWidget {
+  const CustomTodayWorkoutCardWidget({
     super.key,
     required this.title,
     required this.subtitle,
-    required this.onTapViewAll,
-    required this.trainingTitle,
-    required this.minutext,
-    required this.calorytext,
-
-    required this.currenttitle,
+    required this.bodytrainTitle,
+    required this.minute,
+    required this.calory,
+    required this.workouttype,
     required this.listviewBuilder,
   });
+
   final String title;
   final String subtitle;
-  final VoidCallback onTapViewAll;
-  final String trainingTitle;
-  final String minutext;
-  final String calorytext;
-  final String currenttitle;
+  final String bodytrainTitle;
+  final String minute;
+  final String calory;
+  final String workouttype;
   final Widget listviewBuilder;
 
   @override
@@ -33,8 +31,10 @@ class CustomTodaysWorkoutCard extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w),
       child: Container(
+        padding: EdgeInsets.all(16.sp),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16.r),
+
           color: AppColors.cFFFFFF,
           boxShadow: [
             BoxShadow(
@@ -45,41 +45,12 @@ class CustomTodaysWorkoutCard extends StatelessWidget {
             ),
           ],
         ),
-        padding: EdgeInsets.all(16.sp),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(title, style: TextFontStyle.txtfontstyle16w600c212121),
-                GestureDetector(
-                  onTap: onTapViewAll,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(300.r),
-                      color: AppColors.cFFF2F0,
-                    ),
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 8.w,
-                      vertical: 4.h,
-                    ),
-                    child: Text(
-                      'View all',
-                      style: TextFontStyle.txtfontstyle12w400cEA4833montserrat,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
+            Text(title, style: TextFontStyle.txtfontstyle18w700c212121),
             UIHelper.verticalSpace(8.h),
-            Text(
-              subtitle,
-              style: TextFontStyle.txtfontstyle14w400c6B7280montserrat,
-            ),
-
+            Text(subtitle, style: TextFontStyle.txtfontstyle14w400c6B7280),
             UIHelper.verticalspace16,
 
             Container(
@@ -92,7 +63,7 @@ class CustomTodaysWorkoutCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Upper Body Strength',
+                    bodytrainTitle,
                     style: TextFontStyle.txtfontstyle14w600cFFFFFF1,
                   ),
                   UIHelper.verticalspace12,
@@ -107,7 +78,7 @@ class CustomTodaysWorkoutCard extends StatelessWidget {
                               SvgPicture.asset(AppIcons.minute, width: 14.w),
                               UIHelper.horizontalSpace(6.w),
                               Text(
-                                '$minutext min',
+                                minute,
                                 style: TextFontStyle.txtfontstyle12w500cFFFFFF,
                               ),
                             ],
@@ -121,10 +92,10 @@ class CustomTodaysWorkoutCard extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Row(
                             children: [
-                              SvgPicture.asset(AppIcons.minute, width: 14.w),
+                              SvgPicture.asset(AppIcons.calory, width: 14.w),
                               UIHelper.horizontalSpace(6.w),
                               Text(
-                                '$calorytext cal',
+                                calory,
                                 style: TextFontStyle.txtfontstyle12w500cFFFFFF,
                               ),
                             ],
@@ -139,10 +110,10 @@ class CustomTodaysWorkoutCard extends StatelessWidget {
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              SvgPicture.asset(AppIcons.minute, width: 14.w),
+                              SvgPicture.asset(AppIcons.arrowup, width: 14.w),
                               UIHelper.horizontalSpace(6.w),
                               Text(
-                                currenttitle,
+                                workouttype,
                                 style: TextFontStyle.txtfontstyle12w500cFFFFFF,
                               ),
                             ],
@@ -154,7 +125,6 @@ class CustomTodaysWorkoutCard extends StatelessWidget {
                 ],
               ),
             ),
-            UIHelper.verticalSpace(10.h),
 
             listviewBuilder,
           ],
