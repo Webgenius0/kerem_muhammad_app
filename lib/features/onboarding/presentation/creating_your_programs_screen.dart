@@ -82,7 +82,7 @@ class _CreatingYourProgramsScreenState
                 return LinearPercentIndicator(
                   padding: EdgeInsets.zero,
                   percent: value,
-                  lineHeight: 14,
+                  lineHeight: 14.h,
                   barRadius: Radius.circular(100.r),
                   backgroundColor: AppColors.cECECEC,
                   linearGradient: LinearGradient(
@@ -115,7 +115,7 @@ class _CreatingYourProgramsScreenState
                 return LinearPercentIndicator(
                   padding: EdgeInsets.zero,
                   percent: value,
-                  lineHeight: 14,
+                  lineHeight: 14.h,
                   barRadius: Radius.circular(100.r),
                   backgroundColor: AppColors.cECECEC,
                   linearGradient: LinearGradient(
@@ -183,7 +183,7 @@ class _CreatingYourProgramsScreenState
                 return LinearPercentIndicator(
                   padding: EdgeInsets.zero,
                   percent: value,
-                  lineHeight: 14,
+                  lineHeight: 14.h,
                   barRadius: Radius.circular(100.r),
                   backgroundColor: AppColors.cECECEC,
                   linearGradient: LinearGradient(

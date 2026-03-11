@@ -43,7 +43,7 @@ final class UIHelper {
 
   static Widget customDivider() => Container(
     height: 1.h,
-    decoration: BoxDecoration(color: AppColors.c1E2939),
+    decoration: BoxDecoration(color: AppColors.cDFE3E8),
     width: double.infinity,
   );
 

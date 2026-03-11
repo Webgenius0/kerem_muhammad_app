@@ -24,7 +24,7 @@ class CustomCustomerAppBar extends StatelessWidget
   final VoidCallback onTapRoboIcon;
 
   @override
-  Size get preferredSize => Size.fromHeight(120.h);
+  Size get preferredSize => Size.fromHeight(58.h);
 
   @override
   Widget build(BuildContext context) {
