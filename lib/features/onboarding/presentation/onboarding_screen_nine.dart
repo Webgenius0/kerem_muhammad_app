@@ -216,10 +216,13 @@ class _OnboardingScreenNineState extends State<OnboardingScreenNine> {
                     },
                   ),
                   IgnorePointer(
-                    child: SvgPicture.asset(
-                      AppIcons.orangestick,
-                      height: 90.h,
-                      fit: BoxFit.contain,
+                    child: Transform.translate(
+                      offset: Offset(0, -20.h),
+                      child: SvgPicture.asset(
+                        AppIcons.orangestick,
+                        height: 100.h,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                 ],

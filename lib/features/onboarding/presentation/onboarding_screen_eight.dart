@@ -204,17 +204,23 @@ class _OnboardingScreenEightState extends State<OnboardingScreenEight> {
                                 ),
                               )
                             else
-                              SizedBox(height: 20.h),
+                              UIHelper.verticalSpace(20.h),
                           ],
                         ),
                       );
                     },
                   ),
                   IgnorePointer(
-                    child: SvgPicture.asset(
-                      AppIcons.orangestick,
-                      height: 90.h,
-                      fit: BoxFit.contain,
+                    child: Transform.translate(
+                      offset: Offset(
+                        0,
+                        -20.h,
+                      ), // Negative value moves it UPWARDS
+                      child: SvgPicture.asset(
+                        AppIcons.orangestick,
+                        height: 100.h,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                 ],
