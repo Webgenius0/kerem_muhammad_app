@@ -25,4 +25,14 @@ class AppIcons {
   static const String workout = '$basepathIcon/workout.svg';
   static const String robo = '$basepathIcon/robo.svg';
   static const String reward = '$basepathIcon/reward.svg';
+  static const String arrowup = '$basepathIcon/arrowup.svg';
+  // static const String reward = '$basepathIcon/reward.svg';
+  // static const String reward = '$basepathIcon/reward.svg';
+  // static const String reward = '$basepathIcon/reward.svg';
+  // static const String reward = '$basepathIcon/reward.svg';
+  // static const String reward = '$basepathIcon/reward.svg';
+  // static const String reward = '$basepathIcon/reward.svg';
+  // static const String reward = '$basepathIcon/reward.svg';
+  // static const String reward = '$basepathIcon/reward.svg';
+  // static const String reward = '$basepathIcon/reward.svg';
 }

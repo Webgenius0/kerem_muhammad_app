@@ -158,7 +158,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
                 ),
               )
             else
-              // UNSELECTED STATE: Show just the icon and text
               Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [

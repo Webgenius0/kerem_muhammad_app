@@ -25,6 +25,7 @@ import 'package:kerem_muhammad_app/helpers/language.dart';
 import 'package:kerem_muhammad_app/helpers/navigation_service.dart';
 import 'package:kerem_muhammad_app/helpers/register_provider.dart';
 import 'package:kerem_muhammad_app/loading_screen.dart';
+import 'package:kerem_muhammad_app/navigation_screen.dart';
 import 'package:kerem_muhammad_app/networks/dio/dio.dart';
 import 'package:provider/provider.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
@@ -49,10 +50,10 @@ void main() async {
   } catch (e) {
     log('Error setting high refresh rate: $e');
   }
-  runApp(const MyApp());
-  // runApp(
-  //   DevicePreview(enabled: !kReleaseMode, builder: (context) => const MyApp()),
-  // );
+  // runApp(const MyApp());
+  runApp(
+    DevicePreview(enabled: !kReleaseMode, builder: (context) => const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
