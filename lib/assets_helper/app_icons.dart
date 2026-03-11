@@ -26,13 +26,13 @@ class AppIcons {
   static const String robo = '$basepathIcon/robo.svg';
   static const String reward = '$basepathIcon/reward.svg';
   static const String arrowup = '$basepathIcon/arrowup.svg';
-  // static const String reward = '$basepathIcon/reward.svg';
-  // static const String reward = '$basepathIcon/reward.svg';
-  // static const String reward = '$basepathIcon/reward.svg';
-  // static const String reward = '$basepathIcon/reward.svg';
-  // static const String reward = '$basepathIcon/reward.svg';
-  // static const String reward = '$basepathIcon/reward.svg';
-  // static const String reward = '$basepathIcon/reward.svg';
-  // static const String reward = '$basepathIcon/reward.svg';
-  // static const String reward = '$basepathIcon/reward.svg';
+  static const String min = '$basepathIcon/min.svg';
+  static const String calory = '$basepathIcon/calory.svg';
+  static const String pause = '$basepathIcon/pause.svg';
+  static const String breakfast = '$basepathIcon/breakfast.svg';
+  static const String lunch = '$basepathIcon/lunch.svg';
+  static const String workoutdubmall = '$basepathIcon/workoutdubmall.svg';
+  static const String weight = '$basepathIcon/wright.svg';
+  static const String caloryColor = '$basepathIcon/calorycolor.svg';
+  static const String avghr = '$basepathIcon/avghr.svg';
 }

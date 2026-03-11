@@ -19,4 +19,7 @@ class AppImages {
   static const String guava = '$basepathImg/guava.png';
   static const String watermelon = '$basepathImg/watermelon.png';
   static const String longtermimg = '$basepathImg/longtermimg.png';
+  static const String meditate = '$basepathImg/meditate.png';
+  static const String plank = '$basepathImg/plank.png';
+  static const String touchleg = '$basepathImg/touchleg.png';
 }
