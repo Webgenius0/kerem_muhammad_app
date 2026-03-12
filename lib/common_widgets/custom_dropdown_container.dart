@@ -11,8 +11,9 @@ class CustomDropdownContainer extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 6.h),
       decoration: BoxDecoration(
-        color: AppColors.primarycolor,
-        borderRadius: BorderRadius.circular(12.r),
+        color: AppColors.cF9FAFB,
+        borderRadius: BorderRadius.circular(8.r),
+        border: Border.all(color: AppColors.cDFE3E8, width: 1.w),
       ),
       child: dropdownwidget,
     );

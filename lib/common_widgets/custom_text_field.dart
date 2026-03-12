@@ -67,28 +67,27 @@ class _CustomTextFieldState extends State<CustomTextField> {
       cursorRadius: Radius.circular(8.r),
       keyboardType: widget.keyboardType,
       textInputAction: widget.inputAction,
-      style: widget.style ?? TextFontStyle.txtfontstyle24w500primaryColor,
+      style: widget.style ?? TextFontStyle.txtfontstyle16w600c212121,
       decoration: InputDecoration(
         fillColor: widget.fillColor ?? AppColors.cFFFFFF,
         filled: true,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(widget.borderRadius ?? 50.r),
-          borderSide: BorderSide(color: AppColors.cFFFFFF, width: 1.w),
+          borderSide: BorderSide(color: AppColors.cDFE3E8, width: 1.w),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(widget.borderRadius ?? 50.r),
-          borderSide: BorderSide(color: AppColors.cFFFFFF, width: 1.w),
+          borderSide: BorderSide(color: AppColors.cDFE3E8, width: 1.w),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(widget.borderRadius ?? 50.r),
           borderSide: BorderSide(
-            color: widget.borderColor ?? AppColors.cFFFFFF,
+            color: widget.borderColor ?? AppColors.cDFE3E8,
             width: 1.w,
           ),
         ),
         hintText: widget.hintText,
-        hintStyle:
-            widget.hintStyle ?? TextFontStyle.txtfontstyle24w500primaryColor,
+        hintStyle: widget.hintStyle ?? TextFontStyle.txtfontstyle14w400c919EAB,
         suffixIcon: widget.isPassword
             ? GestureDetector(
                 onTap: () {

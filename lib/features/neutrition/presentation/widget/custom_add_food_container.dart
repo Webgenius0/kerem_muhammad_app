@@ -38,7 +38,7 @@ class CustomAddFoodContainer extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12.r),
             color: AppColors.cF5F5F5,
-            border: Border.all(color: AppColors.cD1D5DB, width: 1.w),
+            border: Border.all(color: AppColors.cECECEC, width: 1.w),
           ),
           padding: EdgeInsets.all(12.sp),
           child: Column(

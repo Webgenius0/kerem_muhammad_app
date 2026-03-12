@@ -48,4 +48,7 @@ class AppIcons {
   static const String snacks = '$basepathIcon/snacks.svg';
   static const String neutritionSnacks = '$basepathIcon/neutritionsnacks.svg';
   static const String foodnotavailable = '$basepathIcon/foodnotavailable.svg';
+  static const String camera = '$basepathIcon/camera.svg';
+  static const String cross = '$basepathIcon/cross.svg';
+  static const String arrowright = '$basepathIcon/arrowright.svg';
 }

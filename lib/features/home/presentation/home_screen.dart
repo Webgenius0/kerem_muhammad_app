@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     workoutName: 'Push-ups',
                     exerciseText: 'Exercises',
                     workoutminute: '1 min',
-                    onTapPausePlay: () {},
+                    onTap: () {},
                     donePauseIcon: AppIcons.pause,
                   );
                 },

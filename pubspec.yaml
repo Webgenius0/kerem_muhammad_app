@@ -60,6 +60,7 @@ dependencies:
   smooth_page_indicator: ^2.0.1
   percent_indicator: ^4.2.5
   carousel_slider: ^5.1.2
+  dotted_border: ^3.1.0
 
 dev_dependencies:
   flutter_test:

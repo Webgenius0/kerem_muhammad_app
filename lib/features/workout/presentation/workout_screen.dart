@@ -105,7 +105,7 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
                         AppList().todaysWorkoutList[index]['exerciseText'],
                     workoutminute:
                         AppList().todaysWorkoutList[index]['exerciseText'],
-                    onTapPausePlay: () {
+                    onTap: () {
                       selection(index);
                       NavigationService.navigateTo(Routes.workoutsTimeScreen);
                     },

@@ -4,8 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_icons.dart';
 import 'package:kerem_muhammad_app/common_widgets/cached_network_image_widget.dart';
+import 'package:kerem_muhammad_app/common_widgets/custom_button.dart';
+import 'package:kerem_muhammad_app/common_widgets/custom_button_primary.dart';
 import 'package:kerem_muhammad_app/constants/app_list.dart';
+import 'package:kerem_muhammad_app/constants/text_font_style.dart';
 import 'package:kerem_muhammad_app/features/neutrition/presentation/widget/custom_add_food_container.dart';
+import 'package:kerem_muhammad_app/features/neutrition/presentation/widget/custom_dailog_neutrition_food_card.dart';
+import 'package:kerem_muhammad_app/features/neutrition/presentation/widget/custom_neutrition_food_details_card.dart';
 import 'package:kerem_muhammad_app/features/neutrition/presentation/widget/custom_neutrition_select_food_card.dart';
 import 'package:kerem_muhammad_app/features/neutrition/presentation/widget/custom_neutrition_todays_meals_card.dart';
 import 'package:kerem_muhammad_app/features/neutrition/presentation/widget/custom_schedule_container_widget.dart';
@@ -37,6 +42,22 @@ class _NeutritionScreenState extends State<NeutritionScreen> {
   void selectionfoodtype(int index) {
     setState(() {
       selectedIndexcard = index;
+    });
+  }
+
+  int selectReplaceIndex = -1;
+
+  void selectionReplace(int index) {
+    setState(() {
+      selectReplaceIndex = index;
+    });
+  }
+
+  bool isMarkasEaten = true;
+
+  void toggleButtonColor() {
+    setState(() {
+      isMarkasEaten = !isMarkasEaten;
     });
   }
 
@@ -244,6 +265,129 @@ class _NeutritionScreenState extends State<NeutritionScreen> {
               onTapAdd: () {
                 NavigationService.navigateTo(Routes.addfoodScreen);
               },
+            ),
+
+            CustomNeutritionFoodDetailsCard(
+              foodImageUrl:
+                  "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEZvb2R8ZW58MHx8MHx8fDA%3D",
+              foodName: 'Protein Smoothie Bowl ',
+              calory: '350 cal',
+              protin: '28g',
+              carbs: '22g',
+              fat: '14g',
+
+              markaseatenButton: CustomButton(
+                onTap: () {
+                  toggleButtonColor();
+                },
+                text: isMarkasEaten ? 'Done' : 'Mark as eaten',
+
+                bgColor: AppColors.c4CAF50,
+                borderColor: AppColors.c4CAF50,
+                textColor: AppColors.cFFFFFF,
+                svgicon: isMarkasEaten ? AppIcons.done : null,
+              ),
+              replaceMealButton: CustomButton(
+                onTap: () {
+                  showDialog(
+                    barrierDismissible: true,
+                    context: context,
+                    builder: (context) {
+                      return StatefulBuilder(
+                        builder: (context, setStateDialog) {
+                          return Dialog(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16.r),
+                            ),
+                            child: Container(
+                              height: 360.h,
+                              width: MediaQuery.of(context).size.width,
+                              padding: EdgeInsets.all(24.sp),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Replace breakfast',
+                                    style:
+                                        TextFontStyle.txtfontstyle16w600c212121,
+                                  ),
+
+                                  UIHelper.verticalSpace(8.h),
+                                  Text(
+                                    'Choose a different meal option',
+                                    style: TextFontStyle
+                                        .txtfontstyle14w400c6B7280montserrat,
+                                  ),
+
+                                  Padding(
+                                    padding: EdgeInsets.only(top: 16.h),
+                                    child: UIHelper.customDivider(),
+                                  ),
+                                  Expanded(
+                                    child: ListView.builder(
+                                      itemCount: 2,
+                                      itemBuilder: (context, index) {
+                                        return Padding(
+                                          padding: EdgeInsets.symmetric(
+                                            vertical: 8.h,
+                                          ),
+                                          child: CustomDailogNeutritionFoodCard(
+                                            foodimageUrl:
+                                                "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+                                            foodName: 'Greek Yogurt Bowl',
+                                            calory: '320 cal.',
+                                            protin: '25g protein',
+                                            borderColor:
+                                                selectReplaceIndex == index
+                                                ? AppColors.cFF5722
+                                                : AppColors.cF8F8F8,
+                                            onTap: () {
+                                              setStateDialog(() {
+                                                selectReplaceIndex = index;
+                                              });
+                                            },
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
+                  );
+                },
+                text: 'Replace meal',
+                bgColor: isMarkasEaten ? AppColors.cE5E7EB : AppColors.cFF5722,
+                borderColor: isMarkasEaten
+                    ? AppColors.cE5E7EB
+                    : AppColors.cFF5722,
+                textColor: AppColors.cFFFFFF,
+              ),
+
+              ingradients1: 'Protein powder',
+              ingradients2: 'Banana',
+              ingradients3: 'Spinach',
+              ingradients4: 'Almond butter',
+              ingradients5: 'Coconut flakes',
+            ),
+
+            UIHelper.verticalspace16,
+
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: CustomButtonprimary(
+                title: 'Add',
+                onTap: () {
+                  NavigationService.navigateTo(Routes.addfoodScreen);
+                },
+                buttonColor: AppColors.primaryColor,
+                textColor: AppColors.cFFFFFF,
+                svgicon: AppIcons.add,
+              ),
             ),
 
             UIHelper.verticalSpace(120.h),
