@@ -51,4 +51,10 @@ class AppIcons {
   static const String camera = '$basepathIcon/camera.svg';
   static const String cross = '$basepathIcon/cross.svg';
   static const String arrowright = '$basepathIcon/arrowright.svg';
+  static const String editprofile = '$basepathIcon/editprofile.svg';
+  static const String helpsupport = '$basepathIcon/helpsupport.svg';
+  static const String mail = '$basepathIcon/mail.svg';
+  static const String notification = '$basepathIcon/notification.svg';
+  static const String setting = '$basepathIcon/setting.svg';
+  static const String subscription = '$basepathIcon/subscription.svg';
 }

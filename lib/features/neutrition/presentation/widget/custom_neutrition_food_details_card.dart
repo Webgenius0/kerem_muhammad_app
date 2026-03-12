@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
 import 'package:kerem_muhammad_app/common_widgets/cached_network_image_widget.dart';
-import 'package:kerem_muhammad_app/common_widgets/custom_button.dart';
 import 'package:kerem_muhammad_app/constants/text_font_style.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
