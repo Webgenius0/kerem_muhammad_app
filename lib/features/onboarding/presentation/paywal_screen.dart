@@ -305,9 +305,7 @@ class _PaywalScreenState extends State<PaywalScreen> {
                       ),
                     ],
                   ),
-
                   UIHelper.verticalspace24,
-
                   GestureDetector(
                     onTap: () {
                       selectionPlan(2);
