@@ -10,17 +10,17 @@ class CustomTodaysTrainingCard extends StatelessWidget {
     super.key,
     required this.workoutImage,
     required this.workoutminute,
-    required this.onTapPausePlay,
+    required this.onTap,
     required this.workoutName,
     required this.exerciseText,
     required this.donePauseIcon,
-    this.isSelected = false, // Add this
+    this.isSelected = false,
   });
 
   final String workoutImage;
   final String workoutminute;
   final String workoutName;
-  final VoidCallback onTapPausePlay;
+  final VoidCallback onTap;
   final String exerciseText;
   final String donePauseIcon;
   final bool isSelected;
@@ -30,7 +30,7 @@ class CustomTodaysTrainingCard extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 6.h),
       child: GestureDetector(
-        onTap: onTapPausePlay,
+        onTap: onTap,
         child: Container(
           padding: EdgeInsets.all(12.sp),
           decoration: BoxDecoration(
