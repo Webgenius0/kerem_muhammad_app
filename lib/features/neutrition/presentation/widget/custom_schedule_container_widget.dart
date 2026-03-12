@@ -28,14 +28,6 @@ class CustomScheduleContainerWidget extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24.r),
         color: containerColor,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withAlpha(20),
-            offset: Offset(0, 4),
-            blurRadius: 20,
-            spreadRadius: 0,
-          ),
-        ],
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

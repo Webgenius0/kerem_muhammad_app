@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:kerem_muhammad_app/features/auth/login_sign_up/presentation/login_sign_up_screen.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/home_screen.dart';
+import 'package:kerem_muhammad_app/features/neutrition/presentation/add_food_screen.dart';
 import 'package:kerem_muhammad_app/features/neutrition/presentation/neutrition_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/creating_your_programs_screen.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/get_started_screen.dart';
@@ -62,6 +63,7 @@ final class Routes {
 
   //======================== neutrition =============================
   static const String neutritionScreen = '/neutritionScreen';
+  static const String addfoodScreen = '/addfoodScreen';
 
   //======================== progress =============================
   static const String progressScreen = '/progressScreen';
@@ -309,6 +311,14 @@ final class RouteGenerator {
             : CupertinoPageRoute(
                 builder: (context) => const WorkoutsTimeScreen(),
               );
+
+      case Routes.addfoodScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: AddFoodScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(builder: (context) => const AddFoodScreen());
 
       default:
         return null;

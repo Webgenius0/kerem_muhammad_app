@@ -37,4 +37,15 @@ class AppIcons {
   static const String avghr = '$basepathIcon/avghr.svg';
   static const String doneGreen = '$basepathIcon/donegreen.svg';
   static const String resume = '$basepathIcon/resume.svg';
+  static const String add = '$basepathIcon/add.svg';
+  static const String carbs = '$basepathIcon/carbs.svg';
+  static const String fat = '$basepathIcon/fat.svg';
+  static const String neutritionbreakfast =
+      '$basepathIcon/neutrationbreakfast.svg';
+  static const String neutritiondinner = '$basepathIcon/neutritiondinner.svg';
+  static const String neutritionlunch = '$basepathIcon/neutritionlunch.svg';
+  static const String protin = '$basepathIcon/protin.svg';
+  static const String snacks = '$basepathIcon/snacks.svg';
+  static const String neutritionSnacks = '$basepathIcon/neutritionsnacks.svg';
+  static const String foodnotavailable = '$basepathIcon/foodnotavailable.svg';
 }
