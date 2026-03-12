@@ -122,107 +122,206 @@ class _PaywalScreenState extends State<PaywalScreen> {
 
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
-              child: Row(
+              child: Column(
                 children: [
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        selectionPlan(0);
-                      },
-                      child: Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 20.w,
-                          vertical: 18.h,
-                        ),
-                        decoration: BoxDecoration(
-                          color: planselectedIndex == 0
-                              ? AppColors.primaryColor
-                              : AppColors.cFFFFFF,
-                          borderRadius: BorderRadius.circular(16.r),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 12,
-                              spreadRadius: 0,
-                              blurStyle: BlurStyle.outer,
-                              offset: Offset(0, 0),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () {
+                            selectionPlan(0);
+                          },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 20.w,
+                              vertical: 18.h,
                             ),
-                          ],
-                        ),
-                        child: Stack(
-                          clipBehavior: Clip.none,
-                          alignment: Alignment.topCenter,
-                          children: [
-                            if (planselectedIndex == 0)
-                              Positioned(
-                                top: -30.h,
-                                child: Container(
-                                  padding: EdgeInsets.symmetric(
-                                    horizontal: 14.w,
-                                    vertical: 4.h,
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: AppColors.cFF5722,
-                                    border: Border.all(
-                                      color: AppColors.cFFFFFF,
-                                      width: 1.w,
-                                    ),
-                                    borderRadius: BorderRadius.circular(20.r),
-                                  ),
-                                  child: Text(
-                                    'SAVE 62%',
-                                    style: TextStyle(
-                                      color: AppColors.cFFFFFF,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Text(
-                                  'MONTHLY',
-                                  style: TextFontStyle.txtfontstyle13w700c000000
-                                      .copyWith(
-                                        color: planselectedIndex == 0
-                                            ? AppColors.cFFFFFF
-                                            : AppColors.c000000,
-                                      ),
-                                ),
-                                UIHelper.verticalSpace(4.h),
-                                Text(
-                                  '\$29.99 /mo',
-                                  style: TextFontStyle
-                                      .txtfontstyle16w500c737373Fworksans
-                                      .copyWith(
-                                        color: planselectedIndex == 0
-                                            ? AppColors.cFFFFFF
-                                            : AppColors.c737373,
-                                      ),
+                            decoration: BoxDecoration(
+                              color: planselectedIndex == 0
+                                  ? AppColors.primaryColor
+                                  : AppColors.cFFFFFF,
+                              borderRadius: BorderRadius.circular(16.r),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 12,
+                                  spreadRadius: 0,
+                                  blurStyle: BlurStyle.outer,
+                                  offset: Offset(0, 0),
                                 ),
                               ],
                             ),
-                          ],
+                            child: Stack(
+                              clipBehavior: Clip.none,
+                              alignment: Alignment.topCenter,
+                              children: [
+                                if (planselectedIndex == 0)
+                                  Positioned(
+                                    top: -30.h,
+                                    child: Container(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 14.w,
+                                        vertical: 4.h,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: AppColors.cFF5722,
+                                        border: Border.all(
+                                          color: AppColors.cFFFFFF,
+                                          width: 1.w,
+                                        ),
+                                        borderRadius: BorderRadius.circular(
+                                          20.r,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        'SAVE 62%',
+                                        style: TextStyle(
+                                          color: AppColors.cFFFFFF,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Text(
+                                      'Starter',
+                                      style: TextFontStyle
+                                          .txtfontstyle13w700c000000
+                                          .copyWith(
+                                            color: planselectedIndex == 0
+                                                ? AppColors.cFFFFFF
+                                                : AppColors.c000000,
+                                          ),
+                                    ),
+                                    UIHelper.verticalSpace(4.h),
+                                    Text(
+                                      '\$4.99 /mo',
+                                      style: TextFontStyle
+                                          .txtfontstyle16w500c737373Fworksans
+                                          .copyWith(
+                                            color: planselectedIndex == 0
+                                                ? AppColors.cFFFFFF
+                                                : AppColors.c737373,
+                                          ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ),
-                    ),
+
+                      UIHelper.horizontalspace12,
+
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () {
+                            selectionPlan(1);
+                          },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 20.w,
+                              vertical: 18.h,
+                            ),
+                            decoration: BoxDecoration(
+                              color: planselectedIndex == 1
+                                  ? AppColors.primaryColor
+                                  : AppColors.cFFFFFF,
+                              borderRadius: BorderRadius.circular(16.r),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 12,
+                                  spreadRadius: 0,
+                                  blurStyle: BlurStyle.outer,
+                                  offset: Offset(0, 0),
+                                ),
+                              ],
+                            ),
+                            child: Stack(
+                              clipBehavior: Clip.none,
+                              alignment: Alignment.topCenter,
+                              children: [
+                                if (planselectedIndex == 1)
+                                  Positioned(
+                                    top: -30.h,
+                                    child: Container(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 14.w,
+                                        vertical: 4.h,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: AppColors.cFF5722,
+                                        border: Border.all(
+                                          color: AppColors.cFFFFFF,
+                                          width: 1.w,
+                                        ),
+                                        borderRadius: BorderRadius.circular(
+                                          20.r,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        'SAVE 62%',
+                                        style: TextStyle(
+                                          color: AppColors.cFFFFFF,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Text(
+                                      'Standard',
+                                      style: TextFontStyle
+                                          .txtfontstyle13w700c000000
+                                          .copyWith(
+                                            color: planselectedIndex == 1
+                                                ? AppColors.cFFFFFF
+                                                : AppColors.c000000,
+                                          ),
+                                    ),
+                                    UIHelper.verticalSpace(4.h),
+                                    Text(
+                                      '\$9.99 /mo',
+                                      style: TextFontStyle
+                                          .txtfontstyle16w500c737373Fworksans
+                                          .copyWith(
+                                            color: planselectedIndex == 1
+                                                ? AppColors.cFFFFFF
+                                                : AppColors.c737373,
+                                          ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
 
-                  UIHelper.horizontalspace12,
+                  UIHelper.verticalspace24,
 
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        selectionPlan(1);
-                      },
+                  GestureDetector(
+                    onTap: () {
+                      selectionPlan(2);
+                    },
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 60.w),
                       child: Container(
+                        width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.symmetric(
                           horizontal: 20.w,
                           vertical: 18.h,
                         ),
                         decoration: BoxDecoration(
-                          color: planselectedIndex == 1
+                          color: planselectedIndex == 2
                               ? AppColors.primaryColor
                               : AppColors.cFFFFFF,
                           borderRadius: BorderRadius.circular(16.r),
@@ -240,7 +339,7 @@ class _PaywalScreenState extends State<PaywalScreen> {
                           clipBehavior: Clip.none,
                           alignment: Alignment.topCenter,
                           children: [
-                            if (planselectedIndex == 1)
+                            if (planselectedIndex == 2)
                               Positioned(
                                 top: -30.h,
                                 child: Container(
@@ -269,21 +368,21 @@ class _PaywalScreenState extends State<PaywalScreen> {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Text(
-                                  'YEARLY',
+                                  'Premium',
                                   style: TextFontStyle.txtfontstyle13w700c000000
                                       .copyWith(
-                                        color: planselectedIndex == 1
+                                        color: planselectedIndex == 2
                                             ? AppColors.cFFFFFF
                                             : AppColors.c000000,
                                       ),
                                 ),
                                 UIHelper.verticalSpace(4.h),
                                 Text(
-                                  '\$29.99 /mo',
+                                  '\$19.99 /mo',
                                   style: TextFontStyle
                                       .txtfontstyle16w500c737373Fworksans
                                       .copyWith(
-                                        color: planselectedIndex == 1
+                                        color: planselectedIndex == 2
                                             ? AppColors.cFFFFFF
                                             : AppColors.c737373,
                                       ),
