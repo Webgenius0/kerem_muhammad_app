@@ -50,7 +50,6 @@ class _WorkoutsTimeScreenState extends State<WorkoutsTimeScreen> {
                     textColor: AppColors.c919EAB,
                   ),
                 ),
-
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: GestureDetector(
@@ -58,7 +57,6 @@ class _WorkoutsTimeScreenState extends State<WorkoutsTimeScreen> {
                     child: SvgPicture.asset(AppIcons.resume),
                   ),
                 ),
-
                 Expanded(
                   child: CustomButton(
                     onTap: () {},

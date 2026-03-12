@@ -34,20 +34,21 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 10.h),
+        padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 10.h),
         decoration: BoxDecoration(
           color: bgColor,
           border: Border.all(color: borderColor!, width: 1.w),
           borderRadius: BorderRadius.circular(borderRadius ?? 100.r),
         ),
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if (svgicon != null) ...[
               SvgPicture.asset(
                 svgicon!,
-                height: 20.h,
-                width: 20.w,
+                height: 16.h,
+                width: 16.w,
                 colorFilter: svgIconColor != null
                     ? ColorFilter.mode(svgIconColor!, BlendMode.srcIn)
                     : null,
