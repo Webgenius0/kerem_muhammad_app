@@ -9,13 +9,18 @@ import 'package:kerem_muhammad_app/constants/text_font_style.dart';
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final String? svgimg;
-  final VoidCallback onTap;
+  final String? rightSvgImg;
+  final VoidCallback? onTap;
+  final VoidCallback? onRightTap;
   final Color? appbarColor;
+
   const CustomAppbar({
     super.key,
     this.title,
     this.svgimg,
-    required this.onTap,
+    this.rightSvgImg,
+    this.onTap,
+    this.onRightTap,
     this.appbarColor,
   });
 
@@ -23,38 +28,52 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      backgroundColor: appbarColor,
+      backgroundColor: appbarColor ?? Colors.white,
       automaticallyImplyLeading: false,
-      title: Stack(
-        alignment: Alignment.center,
-        children: [
-          if (svgimg != null)
-            Align(
-              alignment: Alignment.centerLeft,
-              child: GestureDetector(
-                onTap: onTap,
+
+      // ⭐ Left Icon
+      leading: svgimg != null
+          ? GestureDetector(
+              onTap: onTap,
+              child: Padding(
+                padding: EdgeInsets.all(16.w),
                 child: SvgPicture.asset(
                   svgimg!,
                   width: 20.w,
-                  height: 14.h,
-
-                  colorFilter: ColorFilter.mode(
+                  height: 20.h,
+                  colorFilter: const ColorFilter.mode(
                     AppColors.c454545,
                     BlendMode.srcIn,
                   ),
                 ),
               ),
-            ),
+            )
+          : null,
 
-          if (title != null)
-            Center(
-              child: Text(
-                title!,
-                style: TextFontStyle.txtfontstyle26w600cFFFFF,
-              ),
-            ),
-        ],
+      // ⭐ Title
+      title: Padding(
+        padding: EdgeInsets.only(left: 12.w),
+        child: Text(
+          title ?? "",
+          style: TextFontStyle.txtfontstyle18w600c212121,
+        ),
       ),
+
+      actions: rightSvgImg != null
+          ? [
+              GestureDetector(
+                onTap: onRightTap,
+                child: Padding(
+                  padding: EdgeInsets.all(16.w),
+                  child: SvgPicture.asset(
+                    rightSvgImg!,
+                    width: 20.w,
+                    height: 20.h,
+                  ),
+                ),
+              ),
+            ]
+          : null,
     );
   }
 
