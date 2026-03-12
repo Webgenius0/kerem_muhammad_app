@@ -23,7 +23,10 @@ import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_s
 import 'package:kerem_muhammad_app/features/onboarding/presentation/onboarding_screen_twelve.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/oneboarding_screen_two.dart';
 import 'package:kerem_muhammad_app/features/onboarding/presentation/paywal_screen.dart';
+import 'package:kerem_muhammad_app/features/profile/presentation/edit_profile_screen.dart';
+import 'package:kerem_muhammad_app/features/profile/presentation/notification_screen.dart';
 import 'package:kerem_muhammad_app/features/profile/presentation/profile_screen.dart';
+import 'package:kerem_muhammad_app/features/profile/presentation/setting_screen.dart';
 import 'package:kerem_muhammad_app/features/progress/presentation/progress_screen.dart';
 import 'package:kerem_muhammad_app/features/workout/presentation/workout_screen.dart';
 import 'package:kerem_muhammad_app/features/workout/presentation/workouts_time_screen.dart';
@@ -70,6 +73,9 @@ final class Routes {
 
   //======================== prorile =============================
   static const String profileScreen = '/profileScreen';
+  static const String settingsScreen = '/settingsScreen';
+  static const String notificationScreen = '/notificationScreen';
+  static const String editProfileScreen = '/editProfileScreen';
 }
 
 final class RouteGenerator {
@@ -319,6 +325,34 @@ final class RouteGenerator {
                 settings: settings,
               )
             : CupertinoPageRoute(builder: (context) => const AddFoodScreen());
+
+      case Routes.settingsScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: SettingScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(builder: (context) => const SettingScreen());
+
+      case Routes.notificationScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: NotificationScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const NotificationScreen(),
+              );
+
+      case Routes.editProfileScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: EditProfileScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const EditProfileScreen(),
+              );
 
       default:
         return null;

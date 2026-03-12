@@ -57,4 +57,5 @@ class AppIcons {
   static const String notification = '$basepathIcon/notification.svg';
   static const String setting = '$basepathIcon/setting.svg';
   static const String subscription = '$basepathIcon/subscription.svg';
+  static const String logout = '$basepathIcon/logout.svg';
 }

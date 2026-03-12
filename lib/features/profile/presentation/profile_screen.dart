@@ -4,6 +4,8 @@ import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
 import 'package:kerem_muhammad_app/features/profile/presentation/widget/custom_personal_information_card.dart';
 import 'package:kerem_muhammad_app/features/profile/presentation/widget/custom_profile_card.dart';
 import 'package:kerem_muhammad_app/features/profile/presentation/widget/custom_profile_top_section_widget.dart';
+import 'package:kerem_muhammad_app/helpers/all_routes.dart';
+import 'package:kerem_muhammad_app/helpers/navigation_service.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -30,11 +32,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
               name: 'Srity Chowdhury',
               mail: "info@Srity.com",
               age: 'Age - 25',
-              onTapSetting: () {},
+              onTapSetting: () {
+                NavigationService.navigateTo(Routes.settingsScreen);
+              },
             ),
-
             UIHelper.verticalSpace(26.h),
-
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Row(
