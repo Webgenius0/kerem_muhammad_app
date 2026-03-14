@@ -30,7 +30,6 @@ class _SettingScreenState extends State<SettingScreen> {
 
         title: 'Setting',
       ),
-
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(
@@ -47,9 +46,7 @@ class _SettingScreenState extends State<SettingScreen> {
               onTapSubscription: () {},
               onTapHelpSupport: () {},
             ),
-
             UIHelper.verticalspace24,
-
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: CustomButton(
@@ -75,7 +72,6 @@ class _SettingScreenState extends State<SettingScreen> {
                               height: 40.h,
                               width: 40.w,
                             ),
-
                             UIHelper.verticalspace16,
                             Text(
                               'Sign Out',
@@ -101,9 +97,7 @@ class _SettingScreenState extends State<SettingScreen> {
                                     textColor: AppColors.c919EAB,
                                   ),
                                 ),
-
                                 UIHelper.horizontalspace12,
-
                                 Expanded(
                                   child: CustomButton(
                                     onTap: () {},
