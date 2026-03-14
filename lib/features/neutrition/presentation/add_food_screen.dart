@@ -21,12 +21,12 @@ class AddFoodScreen extends StatefulWidget {
 class _AddFoodScreenState extends State<AddFoodScreen> {
   String? selectedCategory;
 
-  final TextEditingController foodNameController = TextEditingController();
-  final TextEditingController protinController = TextEditingController();
-  final TextEditingController caloriesController = TextEditingController();
-  final TextEditingController carbsController = TextEditingController();
-  final TextEditingController fatController = TextEditingController();
-  final TextEditingController ingredientController = TextEditingController();
+  TextEditingController foodNameController = TextEditingController();
+  TextEditingController protinController = TextEditingController();
+  TextEditingController caloriesController = TextEditingController();
+  TextEditingController carbsController = TextEditingController();
+  TextEditingController fatController = TextEditingController();
+  TextEditingController ingredientController = TextEditingController();
 
   List<String> selectedIngredients = [];
   List<String> filteredIngredients = [];
