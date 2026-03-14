@@ -18,6 +18,7 @@ class CustomEditProfileCard extends StatelessWidget {
     required this.activityController,
     required this.currentWrightController,
     required this.goalWeightController,
+    required this.onTapEditprofile,
   });
   final String imageUrl;
 
@@ -26,6 +27,7 @@ class CustomEditProfileCard extends StatelessWidget {
   final TextEditingController activityController;
   final TextEditingController currentWrightController;
   final TextEditingController goalWeightController;
+  final VoidCallback onTapEditprofile;
 
   @override
   Widget build(BuildContext context) {
@@ -63,9 +65,17 @@ class CustomEditProfileCard extends StatelessWidget {
                   ),
 
                   Positioned(
-                    top: -6.h,
-                    right: 0.w,
-                    child: SvgPicture.asset(AppIcons.editprofile),
+                    bottom: 4.h,
+
+                    right: -4.w,
+                    child: GestureDetector(
+                      onTap: onTapEditprofile,
+                      child: SvgPicture.asset(
+                        AppIcons.editprofileblue,
+                        height: 20.h,
+                        width: 20.w,
+                      ),
+                    ),
                   ),
                 ],
               ),
