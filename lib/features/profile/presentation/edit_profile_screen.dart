@@ -47,8 +47,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
               goalWeightController: goalWeightController,
               birthYearController: birghYearController,
+              onTapEditprofile: () {},
             ),
-
             UIHelper.verticalspace24,
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
