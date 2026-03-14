@@ -28,10 +28,9 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      backgroundColor: appbarColor ?? Colors.white,
+      backgroundColor: appbarColor ?? Colors.transparent,
       automaticallyImplyLeading: false,
 
-      // ⭐ Left Icon
       leading: svgimg != null
           ? GestureDetector(
               onTap: onTap,

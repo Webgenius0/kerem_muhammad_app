@@ -27,7 +27,7 @@ class _SettingScreenState extends State<SettingScreen> {
           NavigationService.goBack;
         },
         svgimg: AppIcons.arrowleft,
-        appbarColor: AppColors.cF9FAFB,
+
         title: 'Setting',
       ),
 
@@ -38,7 +38,9 @@ class _SettingScreenState extends State<SettingScreen> {
           children: [
             UIHelper.verticalspace16,
             CustomSettingsCard(
-              onTapEditprofile: () {},
+              onTapEditprofile: () {
+                NavigationService.navigateTo(Routes.editProfileScreen);
+              },
               onTapNotification: () {
                 NavigationService.navigateTo(Routes.notificationScreen);
               },

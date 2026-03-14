@@ -31,17 +31,6 @@ class _AddFoodScreenState extends State<AddFoodScreen> {
   List<String> selectedIngredients = [];
   List<String> filteredIngredients = [];
 
-  @override
-  void dispose() {
-    foodNameController.dispose();
-    protinController.dispose();
-    caloriesController.dispose();
-    carbsController.dispose();
-    fatController.dispose();
-    ingredientController.dispose();
-    super.dispose();
-  }
-
   void searchIngredient(String value) {
     setState(() {
       filteredIngredients = AppList().allIngredients
