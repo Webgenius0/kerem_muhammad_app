@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:kerem_muhammad_app/features/auth/login_sign_up/presentation/login_sign_up_screen.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/home_screen.dart';
+import 'package:kerem_muhammad_app/features/home/presentation/leaderboard_screen.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/reward_screen.dart';
 import 'package:kerem_muhammad_app/features/neutrition/presentation/add_food_screen.dart';
 import 'package:kerem_muhammad_app/features/neutrition/presentation/neutrition_screen.dart';
@@ -62,6 +63,7 @@ final class Routes {
   //======================== home ===============================
   static const String homeScreen = '/homeScreen';
   static const String rewardScreen = '/rewardScreen';
+  static const String leaderboardScreen = '/leaderboardScreen';
   //======================== workout =============================
   static const String workoutScreen = '/workoutScreen';
   static const String workoutsTimeScreen = '/workoutsTimeScreen';
@@ -363,6 +365,16 @@ final class RouteGenerator {
                 settings: settings,
               )
             : CupertinoPageRoute(builder: (context) => const RewardScreen());
+
+      case Routes.leaderboardScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: LeaderboardScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const LeaderboardScreen(),
+              );
 
       default:
         return null;
