@@ -32,7 +32,6 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:device_preview/device_preview.dart';
 
-// import 'package:device_preview/device_preview.dart';
 Future<void> backgroundHandler(RemoteMessage message) async {}
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -118,7 +117,7 @@ class UtillScreenMobile extends StatelessWidget {
             },
             navigatorKey: NavigationService.navigatorKey,
             onGenerateRoute: RouteGenerator.generateRoute,
-            home: const Loading(),
+            home: const NavigationScreen(),
           ),
         );
       },

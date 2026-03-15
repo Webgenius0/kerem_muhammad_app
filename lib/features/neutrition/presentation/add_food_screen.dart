@@ -10,6 +10,8 @@ import 'package:kerem_muhammad_app/constants/text_font_style.dart';
 import 'package:kerem_muhammad_app/features/neutrition/presentation/widget/custom_add_food_widget.dart';
 import 'package:kerem_muhammad_app/features/neutrition/presentation/widget/custom_camera_widget.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
 
 class AddFoodScreen extends StatefulWidget {
   const AddFoodScreen({super.key});
@@ -30,6 +32,75 @@ class _AddFoodScreenState extends State<AddFoodScreen> {
 
   List<String> selectedIngredients = [];
   List<String> filteredIngredients = [];
+
+  File? selectedImage;
+  final ImagePicker picker = ImagePicker();
+
+  Future<void> pickFromCamera() async {
+    final XFile? image = await picker.pickImage(source: ImageSource.camera);
+
+    if (image != null) {
+      setState(() {
+        selectedImage = File(image.path);
+      });
+    }
+  }
+
+  Future<void> pickFromGallery() async {
+    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+
+    if (image != null) {
+      setState(() {
+        selectedImage = File(image.path);
+      });
+    }
+  }
+
+  void showImageSourceBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (context) {
+        return Container(
+          padding: EdgeInsets.all(20),
+          height: 180.h,
+          child: Column(
+            children: [
+              Container(
+                width: 40,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade400,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              SizedBox(height: 20),
+
+              ListTile(
+                leading: Icon(Icons.camera_alt),
+                title: Text("Take Photo"),
+                onTap: () {
+                  Navigator.pop(context);
+                  pickFromCamera();
+                },
+              ),
+
+              ListTile(
+                leading: Icon(Icons.photo),
+                title: Text("Choose from Gallery"),
+                onTap: () {
+                  Navigator.pop(context);
+                  pickFromGallery();
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
 
   void searchIngredient(String value) {
     setState(() {
@@ -53,7 +124,11 @@ class _AddFoodScreenState extends State<AddFoodScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             UIHelper.verticalSpace(80.h),
-            CustomCameraWidget(onTapCamera: () {}, onTapChoosePicture: () {}),
+            CustomCameraWidget(
+              image: selectedImage,
+              onTapCamera: showImageSourceBottomSheet,
+              onTapChoosePicture: showImageSourceBottomSheet,
+            ),
             UIHelper.verticalspace16,
             Text('Category', style: TextFontStyle.txtfontstyle14w500c212121),
             UIHelper.verticalSpace(8.h),
@@ -75,7 +150,7 @@ class _AddFoodScreenState extends State<AddFoodScreen> {
                     ),
                     borderRadius: BorderRadius.circular(8.r),
                     value: selectedCategory,
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.keyboard_arrow_down_rounded,
                       color: AppColors.c919EAB,
                     ),
@@ -117,7 +192,7 @@ class _AddFoodScreenState extends State<AddFoodScreen> {
                                     ),
                               ),
                               if (isSelected)
-                                const Icon(
+                                Icon(
                                   Icons.check_circle,
                                   color: Colors.white,
                                   size: 20,
@@ -203,7 +278,7 @@ class _AddFoodScreenState extends State<AddFoodScreen> {
                 height: 40.h,
                 decoration: BoxDecoration(
                   color: AppColors.cF9FAFB,
-                  border: Border.all(color: Colors.grey.shade300),
+                  border: Border.all(color: AppColors.cDFE3E8, width: 1.w),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: ListView.builder(

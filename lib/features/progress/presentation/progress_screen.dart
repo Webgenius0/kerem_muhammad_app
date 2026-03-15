@@ -1112,7 +1112,6 @@ class _ProgressScreenState extends State<ProgressScreen> {
                                   },
                                 ),
                                 inprogressText2: '1780 in',
-
                                 outprogress2: TweenAnimationBuilder<double>(
                                   tween: Tween(begin: 0, end: 0.9),
                                   duration: const Duration(milliseconds: 500),
@@ -1181,7 +1180,6 @@ class _ProgressScreenState extends State<ProgressScreen> {
                                 ),
                                 outprogressText3: '1780 out',
                               ),
-
                               CustomProgressProgressSummaryCard(
                                 title: 'Progress Summary',
                                 subtitle: "This week's achievements",
@@ -1195,7 +1193,6 @@ class _ProgressScreenState extends State<ProgressScreen> {
                                 weighText: 'lbs this week',
                                 workouText: 'days completed',
                               ),
-
                               UIHelper.verticalSpace(120.h),
                             ],
                           ),
