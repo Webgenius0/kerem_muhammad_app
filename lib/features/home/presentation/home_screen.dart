@@ -9,6 +9,8 @@ import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_prog
 import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_streak_challanges_card.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_todays_meal_card.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_todays_workout_card.dart';
+import 'package:kerem_muhammad_app/helpers/all_routes.dart';
+import 'package:kerem_muhammad_app/helpers/navigation_service.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -28,8 +30,10 @@ class _HomeScreenState extends State<HomeScreen> {
             "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0",
         message: 'Are you ready to smash your fitness goals today?',
         userName: 'Alex',
-        onTapRewardicon: () {},
-        onTapRoboIcon: () {},
+        onTapRewardicon: () {
+          NavigationService.navigateTo(Routes.rewardScreen);
+        },
+        onTapAiIcon: () {},
       ),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),

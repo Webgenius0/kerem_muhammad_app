@@ -14,14 +14,14 @@ class CustomCustomerAppBar extends StatelessWidget
     required this.userName,
     required this.message,
     required this.onTapRewardicon,
-    required this.onTapRoboIcon,
+    required this.onTapAiIcon,
   });
 
   final String imageurl;
   final String userName;
   final String message;
   final VoidCallback onTapRewardicon;
-  final VoidCallback onTapRoboIcon;
+  final VoidCallback onTapAiIcon;
 
   @override
   Size get preferredSize => Size.fromHeight(58.h);
@@ -89,8 +89,8 @@ class CustomCustomerAppBar extends StatelessWidget
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   GestureDetector(
-                    onTap: onTapRoboIcon,
-                    child: _buildIconButton(AppIcons.robo, AppColors.cFF5722),
+                    onTap: onTapAiIcon,
+                    child: _buildIconButton(AppIcons.aichat, AppColors.cFF5722),
                   ),
                   UIHelper.horizontalSpace(8.w),
                   GestureDetector(

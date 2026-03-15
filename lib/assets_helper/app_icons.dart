@@ -23,7 +23,7 @@ class AppIcons {
   static const String profile = '$basepathIcon/profile.svg';
   static const String progress = '$basepathIcon/progress.svg';
   static const String workout = '$basepathIcon/workout.svg';
-  static const String robo = '$basepathIcon/robo.svg';
+  static const String aichat = '$basepathIcon/robo.svg';
   static const String reward = '$basepathIcon/reward.svg';
   static const String arrowup = '$basepathIcon/arrowup.svg';
   static const String minute = '$basepathIcon/minute.svg';
@@ -59,4 +59,8 @@ class AppIcons {
   static const String subscription = '$basepathIcon/subscription.svg';
   static const String logout = '$basepathIcon/logout.svg';
   static const String editprofileblue = '$basepathIcon/editprofileblue.svg';
+  static const String rankingic = '$basepathIcon/ranking.svg';
+  static const String badge = '$basepathIcon/badge.svg';
+  static const String points = '$basepathIcon/points.svg';
+  static const String fire = '$basepathIcon/fire.svg';
 }

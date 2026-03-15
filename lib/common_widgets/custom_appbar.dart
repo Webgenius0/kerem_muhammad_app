@@ -9,7 +9,7 @@ import 'package:kerem_muhammad_app/constants/text_font_style.dart';
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final String? svgimg;
-  final String? rightSvgImg;
+  final String? rightSvgIcon;
   final VoidCallback? onTap;
   final VoidCallback? onRightTap;
   final Color? appbarColor;
@@ -18,7 +18,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
     super.key,
     this.title,
     this.svgimg,
-    this.rightSvgImg,
+    this.rightSvgIcon,
     this.onTap,
     this.onRightTap,
     this.appbarColor,
@@ -49,7 +49,6 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
             )
           : null,
 
-      // ⭐ Title
       title: Padding(
         padding: EdgeInsets.only(left: 12.w),
         child: Text(
@@ -57,17 +56,29 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           style: TextFontStyle.txtfontstyle18w600c212121,
         ),
       ),
-
-      actions: rightSvgImg != null
+      actions: rightSvgIcon != null
           ? [
-              GestureDetector(
-                onTap: onRightTap,
-                child: Padding(
-                  padding: EdgeInsets.all(16.w),
-                  child: SvgPicture.asset(
-                    rightSvgImg!,
-                    width: 20.w,
-                    height: 20.h,
+              Padding(
+                padding: EdgeInsets.only(right: 20.w),
+                child: GestureDetector(
+                  onTap: onRightTap,
+                  child: Container(
+                    padding: EdgeInsets.all(8.w),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: AppColors.cFF5722,
+                    ),
+                    child: Center(
+                      child: SvgPicture.asset(
+                        rightSvgIcon!,
+                        width: 22.w,
+                        height: 22.h,
+                        colorFilter: const ColorFilter.mode(
+                          Colors.white,
+                          BlendMode.srcIn,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
