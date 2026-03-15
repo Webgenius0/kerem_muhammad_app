@@ -64,7 +64,6 @@ class _ProgressScreenState extends State<ProgressScreen> {
                       ),
                     ),
                   ),
-
                   Expanded(
                     child: TabBarView(
                       children: [
