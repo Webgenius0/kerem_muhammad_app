@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
         message: 'Are you ready to smash your fitness goals today?',
         userName: 'Alex',
         onTapRewardicon: () {
-          NavigationService.navigateTo(Routes.rewardScreen);
+          NavigationService.navigateTo(Routes.leaderboardScreen);
         },
         onTapAiIcon: () {},
       ),

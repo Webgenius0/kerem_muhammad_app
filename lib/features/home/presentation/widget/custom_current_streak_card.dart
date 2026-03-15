@@ -125,7 +125,7 @@ class CustomCurrentStreakCard extends StatelessWidget {
 
   Widget _buildItem(String? svgIcon, String? number) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 4.w),
+      margin: EdgeInsets.symmetric(horizontal: 2.w),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(160.r),
         color: AppColors.ccFFFF10percent,

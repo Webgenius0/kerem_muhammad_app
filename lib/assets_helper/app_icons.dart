@@ -69,4 +69,5 @@ class AppIcons {
   static const String marathongrey = '$basepathIcon/marathongrey.svg';
   static const String perfectweekgrey = '$basepathIcon/perfectweekgrey.svg';
   static const String strengthgrey = '$basepathIcon/strengthgrey.svg';
+  static const String crown = '$basepathIcon/crown.svg';
 }
