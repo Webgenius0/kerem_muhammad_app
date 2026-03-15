@@ -63,4 +63,10 @@ class AppIcons {
   static const String badge = '$basepathIcon/badge.svg';
   static const String points = '$basepathIcon/points.svg';
   static const String fire = '$basepathIcon/fire.svg';
+  static const String calorygrey = '$basepathIcon/calorygrey.svg';
+  static const String consintency = '$basepathIcon/consinstency.svg';
+  static const String earlybird = '$basepathIcon/earlybird.svg';
+  static const String marathongrey = '$basepathIcon/marathongrey.svg';
+  static const String perfectweekgrey = '$basepathIcon/perfectweekgrey.svg';
+  static const String strengthgrey = '$basepathIcon/strengthgrey.svg';
 }

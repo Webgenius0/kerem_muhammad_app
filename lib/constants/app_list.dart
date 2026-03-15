@@ -140,4 +140,46 @@ class AppList {
     "Apple",
     "Oats",
   ];
+
+  final List<Map<String, dynamic>> rewardBadgesList = [
+    {
+      'icon': AppIcons.earlybird,
+      'title': "Early Bird",
+      'subtitle': "Complete 5 morning workouts",
+      'status': "Unlock",
+    },
+
+    {
+      'icon': AppIcons.consintency,
+      'title': "Consistency King",
+      'subtitle': "7-day workout streak",
+      'status': "Unlock",
+    },
+    {
+      'icon': AppIcons.calorygrey,
+      'title': "Calorie Crusher",
+      'subtitle': "Burn 5000 calories in a week",
+      'status': "Unlock",
+    },
+    {
+      'icon': AppIcons.strengthgrey,
+      'title': "Strength Master",
+      'subtitle': "Complete 20 strength workouts",
+      'status': "Unlock",
+    },
+
+    {
+      'icon': AppIcons.marathongrey,
+      'title': "Marathon Runner",
+      'subtitle': "Run 100km total distance",
+      'status': "Unlock",
+    },
+
+    {
+      'icon': AppIcons.perfectweekgrey,
+      'title': "Perfect Week",
+      'subtitle': "Complete all planned activities for a week",
+      'status': "Unlock",
+    },
+  ];
 }
