@@ -42,7 +42,14 @@ class CustomSubscriptionBillingInformationCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(name, style: TextFontStyle.txtfontstyle14w400c212121),
+                Expanded(
+                  child: Text(
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    name,
+                    style: TextFontStyle.txtfontstyle14w400c212121,
+                  ),
+                ),
                 GestureDetector(
                   onTap: onTapbillingHistory,
                   child: Text(
@@ -57,7 +64,14 @@ class CustomSubscriptionBillingInformationCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(mail, style: TextFontStyle.txtfontstyle14w400c212121),
+                Expanded(
+                  child: Text(
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    mail,
+                    style: TextFontStyle.txtfontstyle14w400c212121,
+                  ),
+                ),
                 GestureDetector(
                   onTap: onTapChangeHistory,
                   child: Text(
