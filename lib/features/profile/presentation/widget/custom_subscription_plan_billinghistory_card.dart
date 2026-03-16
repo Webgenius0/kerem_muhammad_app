@@ -37,27 +37,29 @@ class CustomSubscriptionPlanBillinghistoryCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
-              children: [
-                SvgPicture.asset(AppIcons.card),
-                UIHelper.horizontalSpace(8.w),
-                Text(
-                  cardNumber,
-                  style: TextFontStyle.txtfontstyle14w400c212121inter,
-                ),
-              ],
+            Expanded(
+              child: Row(
+                children: [
+                  SvgPicture.asset(AppIcons.card),
+                  UIHelper.horizontalSpace(8.w),
+                  Expanded(
+                    child: Text(
+                      cardNumber,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextFontStyle.txtfontstyle14w400c212121inter,
+                    ),
+                  ),
+                ],
+              ),
             ),
 
-            Row(
-              children: [
-                GestureDetector(
-                  onTap: onTapbillingHistory,
-                  child: Text(
-                    'Billing history',
-                    style: TextFontStyle.txtfontstyle14w600primaryColor,
-                  ),
-                ),
-              ],
+            GestureDetector(
+              onTap: onTapbillingHistory,
+              child: Text(
+                'Billing history',
+                style: TextFontStyle.txtfontstyle14w600primaryColor,
+              ),
             ),
           ],
         ),

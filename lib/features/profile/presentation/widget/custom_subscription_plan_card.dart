@@ -46,30 +46,32 @@ class CustomSubscriptionPlanCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Text(
-                      subscriptionType,
-                      style: TextFontStyle.txtfontstyle14w500c212121,
-                    ),
-                    UIHelper.horizontalSpace(8.w),
-                    Text(
-                      '\$$subscriptionPrice /$subscrtiptionplan',
-                      style: TextFontStyle.txtfontstyle14w700c212121,
-                    ),
-                  ],
+                Expanded(
+                  child: Row(
+                    children: [
+                      Text(
+                        subscriptionType,
+                        style: TextFontStyle.txtfontstyle14w500c212121,
+                      ),
+                      UIHelper.horizontalSpace(8.w),
+                      Flexible(
+                        child: Text(
+                          '\$$subscriptionPrice /$subscrtiptionplan',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextFontStyle.txtfontstyle14w700c212121,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
 
-                Row(
-                  children: [
-                    GestureDetector(
-                      onTap: onTapUpgradePlan,
-                      child: Text(
-                        'Upgrade plan',
-                        style: TextFontStyle.txtfontstyle14w600primaryColor,
-                      ),
-                    ),
-                  ],
+                GestureDetector(
+                  onTap: onTapUpgradePlan,
+                  child: Text(
+                    'Upgrade plan',
+                    style: TextFontStyle.txtfontstyle14w600primaryColor,
+                  ),
                 ),
               ],
             ),
