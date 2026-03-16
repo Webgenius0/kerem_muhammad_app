@@ -53,7 +53,7 @@ class _NeutritionScreenState extends State<NeutritionScreen> {
     });
   }
 
-  bool isMarkasEaten = true;
+  bool isMarkasEaten = false;
 
   void toggleButtonColor() {
     setState(() {
