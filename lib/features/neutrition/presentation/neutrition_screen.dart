@@ -100,9 +100,7 @@ class _NeutritionScreenState extends State<NeutritionScreen> {
                 },
               ),
             ),
-
             UIHelper.verticalspace16,
-
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Stack(

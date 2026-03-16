@@ -115,7 +115,9 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: EdgeInsets.only(top: 16.h),
               child: CustomStreakChallangesCard(
-                onTapDetails: () {},
+                onTapDetails: () {
+                  NavigationService.navigateTo(Routes.rewardScreen);
+                },
                 title: 'Streak & Challenges',
                 subtitle: 'Keep the momentum going!',
 

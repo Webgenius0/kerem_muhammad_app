@@ -182,4 +182,60 @@ class AppList {
       'status': "Unlock",
     },
   ];
+
+  final List<Map<String, dynamic>> leaderboardrankuserlist = [
+    {
+      'userImage':
+          "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+      'icon': AppIcons.rankup,
+      'name': "Sebastian",
+      'username': "@username",
+      'points': "1124",
+    },
+
+    {
+      'userImage':
+          "https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+      'icon': AppIcons.rankdown,
+      'name': "Sebastian",
+      'username': "@username",
+      'points': "875",
+    },
+
+    {
+      'userImage':
+          "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+      'icon': AppIcons.rankup,
+      'name': "Sebastian",
+      'username': "@username",
+      'points': "1124",
+    },
+
+    {
+      'userImage':
+          "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+      'icon': AppIcons.rankup,
+      'name': "Sebastian",
+      'username': "@username",
+      'points': "875",
+    },
+
+    {
+      'userImage':
+          "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+      'icon': AppIcons.rankup,
+      'name': "Sebastian",
+      'username': "@username",
+      'points': "875",
+    },
+
+    {
+      'userImage':
+          "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+      'icon': AppIcons.rankup,
+      'name': "Sebastian",
+      'username': "@username",
+      'points': "875",
+    },
+  ];
 }
