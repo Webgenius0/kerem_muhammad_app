@@ -43,7 +43,9 @@ class _SettingScreenState extends State<SettingScreen> {
               onTapNotification: () {
                 NavigationService.navigateTo(Routes.notificationScreen);
               },
-              onTapSubscription: () {},
+              onTapSubscription: () {
+                NavigationService.navigateTo(Routes.subscriptionScreen);
+              },
               onTapHelpSupport: () {},
             ),
             UIHelper.verticalspace24,

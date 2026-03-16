@@ -72,4 +72,5 @@ class AppIcons {
   static const String crown = '$basepathIcon/crown.svg';
   static const String rankdown = '$basepathIcon/rankdown.svg';
   static const String rankup = '$basepathIcon/rankup.svg';
+  static const String donegrey = '$basepathIcon/donegrey.svg';
 }

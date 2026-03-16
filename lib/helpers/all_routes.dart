@@ -29,6 +29,8 @@ import 'package:kerem_muhammad_app/features/profile/presentation/edit_profile_sc
 import 'package:kerem_muhammad_app/features/profile/presentation/notification_screen.dart';
 import 'package:kerem_muhammad_app/features/profile/presentation/profile_screen.dart';
 import 'package:kerem_muhammad_app/features/profile/presentation/setting_screen.dart';
+import 'package:kerem_muhammad_app/features/profile/presentation/subscription_payment_page_screen.dart';
+import 'package:kerem_muhammad_app/features/profile/presentation/subscription_screen.dart';
 import 'package:kerem_muhammad_app/features/progress/presentation/progress_screen.dart';
 import 'package:kerem_muhammad_app/features/workout/presentation/workout_screen.dart';
 import 'package:kerem_muhammad_app/features/workout/presentation/workouts_time_screen.dart';
@@ -80,6 +82,8 @@ final class Routes {
   static const String settingsScreen = '/settingsScreen';
   static const String notificationScreen = '/notificationScreen';
   static const String editProfileScreen = '/editProfileScreen';
+  static const String subscriptionScreen = '/subscriptionScreen';
+  static const String subscriptionPaymentScreen = '/subscriptionPaymentScreen';
 }
 
 final class RouteGenerator {
@@ -374,6 +378,28 @@ final class RouteGenerator {
               )
             : CupertinoPageRoute(
                 builder: (context) => const LeaderboardScreen(),
+              );
+
+      case Routes.subscriptionPaymentScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(
+                  widget: SubscriptionPaymentPageScreen(),
+                ),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const SubscriptionPaymentPageScreen(),
+              );
+
+      case Routes.subscriptionScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: SubscriptionScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(
+                builder: (context) => const SubscriptionScreen(),
               );
 
       default:

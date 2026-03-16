@@ -68,7 +68,6 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                 );
               },
             ),
-
             UIHelper.verticalspace32,
           ],
         ),
