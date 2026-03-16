@@ -3,10 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_icons.dart';
 import 'package:kerem_muhammad_app/common_widgets/custom_appbar.dart';
+import 'package:kerem_muhammad_app/common_widgets/custom_button_primary.dart';
 import 'package:kerem_muhammad_app/features/profile/presentation/widget/custom_subscription_gopremiul_card.dart';
 import 'package:kerem_muhammad_app/features/profile/presentation/widget/custom_subscription_premium_card.dart';
 import 'package:kerem_muhammad_app/features/profile/presentation/widget/custom_subscription_standard_card.dart';
 import 'package:kerem_muhammad_app/features/profile/presentation/widget/custom_subscription_starter_card.dart';
+import 'package:kerem_muhammad_app/helpers/all_routes.dart';
 import 'package:kerem_muhammad_app/helpers/navigation_service.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
@@ -90,17 +92,6 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                         // ===================== streak ========================
                         SingleChildScrollView(
                           physics: BouncingScrollPhysics(),
-                          child: Column(children: [
-                       
-
-                            
-                            ],
-                          ),
-                        ),
-
-                        //======================= Challanges ======================
-                        SingleChildScrollView(
-                          physics: BouncingScrollPhysics(),
                           child: Column(
                             children: [
                               UIHelper.verticalspace24,
@@ -108,6 +99,9 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                 title: 'Starter',
                                 onTap: () {
                                   selectionPlan(0);
+                                  NavigationService.navigateTo(
+                                    Routes.subscriptionPaymentScreen,
+                                  );
                                 },
                                 cardBorderColor: selectedPlanIndex == 0
                                     ? AppColors.cFF5722
@@ -125,6 +119,9 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                               CustomSubscriptionStandartCard(
                                 onTap: () {
                                   selectionPlan(1);
+                                  NavigationService.navigateTo(
+                                    Routes.subscriptionPaymentScreen,
+                                  );
                                 },
                                 title: 'Standard',
                                 cardBorderColor: selectedPlanIndex == 1
@@ -145,6 +142,9 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                               CustomSubscriptionPremiumCard(
                                 onTap: () {
                                   selectionPlan(2);
+                                  NavigationService.navigateTo(
+                                    Routes.subscriptionPaymentScreen,
+                                  );
                                 },
                                 cardBorderColor: selectedPlanIndex == 2
                                     ? AppColors.cFF5722
@@ -162,6 +162,107 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                     'Global leaderboard, competitions',
                                 plandescription5:
                                     'Animated transformations & effects',
+                              ),
+
+                              UIHelper.verticalspace24,
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                                child: CustomButtonprimary(
+                                  title: 'Start free trail',
+                                  onTap: () {},
+                                  buttonColor: AppColors.primaryColor,
+                                  textColor: AppColors.cFFFFFF,
+                                ),
+                              ),
+
+                              UIHelper.verticalspace32,
+                            ],
+                          ),
+                        ),
+                        //======================= Challanges ======================
+                        SingleChildScrollView(
+                          physics: BouncingScrollPhysics(),
+                          child: Column(
+                            children: [
+                              UIHelper.verticalspace24,
+                              CustomSubscriptionStarterCard(
+                                title: 'Starter',
+                                onTap: () {
+                                  selectionPlan(0);
+                                  NavigationService.navigateTo(
+                                    Routes.subscriptionPaymentScreen,
+                                  );
+                                },
+                                cardBorderColor: selectedPlanIndex == 0
+                                    ? AppColors.cFF5722
+                                    : AppColors.cFFFFFF,
+                                planPrice: '€13.99',
+                                plantype: 'month',
+                                plandescription1:
+                                    'Goal selection: Muscle building, fat loss',
+                                plandescription2:
+                                    'Standard training & meal plans',
+                                plandescription3: 'Daily Al chat',
+                                plandescription4: 'Basic design & simple coach',
+                              ),
+
+                              CustomSubscriptionStandartCard(
+                                onTap: () {
+                                  selectionPlan(1);
+                                  NavigationService.navigateTo(
+                                    Routes.subscriptionPaymentScreen,
+                                  );
+                                },
+                                title: 'Standard',
+                                cardBorderColor: selectedPlanIndex == 1
+                                    ? AppColors.cFF5722
+                                    : AppColors.cFFFFFF,
+                                planPrice: '€25.99',
+                                plantype: 'month',
+                                plandescription1: 'Everything from Starter',
+                                plandescription2:
+                                    'Advanced goals + desired size focus',
+                                plandescription3:
+                                    'Animated 3D coach with exercise',
+                                plandescription4:
+                                    'Progress charts, daily progress',
+                                plandescription5: 'Rewards & daily motivation',
+                              ),
+
+                              CustomSubscriptionPremiumCard(
+                                onTap: () {
+                                  selectionPlan(2);
+                                  NavigationService.navigateTo(
+                                    Routes.subscriptionPaymentScreen,
+                                  );
+                                },
+                                cardBorderColor: selectedPlanIndex == 2
+                                    ? AppColors.cFF5722
+                                    : AppColors.cFFFFFF,
+                                title: 'Premium',
+                                planPrice: '€34.99',
+                                plantype: 'month',
+                                plandescription1:
+                                    'Everything from Starter + Standard',
+                                plandescription2:
+                                    'Real-time Al coaching & tips',
+                                plandescription3:
+                                    'Progress simulation (what you could look like in 4 weeks)',
+                                plandescription4:
+                                    'Global leaderboard, competitions',
+                                plandescription5:
+                                    'Animated transformations & effects',
+                              ),
+
+                              UIHelper.verticalspace24,
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                                child: CustomButtonprimary(
+                                  title: 'Start free trail',
+                                  onTap: () {},
+                                  buttonColor: AppColors.primaryColor,
+                                  textColor: AppColors.cFFFFFF,
+                                ),
                               ),
 
                               UIHelper.verticalspace32,
