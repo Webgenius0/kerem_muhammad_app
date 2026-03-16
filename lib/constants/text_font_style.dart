@@ -514,4 +514,58 @@ class TextFontStyle {
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
   );
+
+  static final txtfontstyle12w600c212121 = GoogleFonts.montserrat(
+    color: AppColors.c212121,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w600,
+  );
+
+  static final txtfontstyle15w700primaryColor = GoogleFonts.montserrat(
+    color: AppColors.primaryColor,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static final txtfontstyle15w700c4CAF50 = GoogleFonts.montserrat(
+    color: AppColors.c4CAF50,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static final txtfontstyle12w700c212121 = GoogleFonts.montserrat(
+    color: AppColors.c212121,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static final txtfontstyle20w700cFFFFFF = GoogleFonts.montserrat(
+    color: AppColors.cFFFFFF,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static final txtfontstyle16w400cFFFFFF = GoogleFonts.montserrat(
+    color: AppColors.cFFFFFF,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400,
+  );
+
+  static final txtfontstyle24w600primaryColor = GoogleFonts.montserrat(
+    color: AppColors.primaryColor,
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w600,
+  );
+
+  static final txtfontstyle16w600c212121inter = GoogleFonts.inter(
+    color: AppColors.c212121,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+  );
+
+  static final txtfontstyle16w400c637381 = GoogleFonts.montserrat(
+    color: AppColors.c637381,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400,
+  );
 }
