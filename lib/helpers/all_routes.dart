@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:kerem_muhammad_app/features/auth/login_sign_up/presentation/login_sign_up_screen.dart';
+import 'package:kerem_muhammad_app/features/home/presentation/ai_chat_screen.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/home_screen.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/leaderboard_screen.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/reward_screen.dart';
@@ -66,6 +67,7 @@ final class Routes {
   static const String homeScreen = '/homeScreen';
   static const String rewardScreen = '/rewardScreen';
   static const String leaderboardScreen = '/leaderboardScreen';
+  static const String aichatScreen = '/aichatScreen';
   //======================== workout =============================
   static const String workoutScreen = '/workoutScreen';
   static const String workoutsTimeScreen = '/workoutsTimeScreen';
@@ -76,7 +78,6 @@ final class Routes {
 
   //======================== progress =============================
   static const String progressScreen = '/progressScreen';
-
   //======================== prorile =============================
   static const String profileScreen = '/profileScreen';
   static const String settingsScreen = '/settingsScreen';
@@ -401,6 +402,14 @@ final class RouteGenerator {
             : CupertinoPageRoute(
                 builder: (context) => const SubscriptionScreen(),
               );
+
+      case Routes.aichatScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const ScreenTitle(widget: AiChatScreen()),
+                settings: settings,
+              )
+            : CupertinoPageRoute(builder: (context) => const AiChatScreen());
 
       default:
         return null;

@@ -33,7 +33,9 @@ class _HomeScreenState extends State<HomeScreen> {
         onTapRewardicon: () {
           NavigationService.navigateTo(Routes.leaderboardScreen);
         },
-        onTapAiIcon: () {},
+        onTapAiIcon: () {
+          NavigationService.navigateTo(Routes.aichatScreen);
+        },
       ),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
