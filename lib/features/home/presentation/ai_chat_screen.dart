@@ -43,6 +43,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _messageController.clear();
     _scrollToBottom();
 
+    // Simulating AI thinking time
     await Future.delayed(const Duration(milliseconds: 800));
 
     setState(() {
@@ -58,10 +59,12 @@ class _AiChatScreenState extends State<AiChatScreen> {
   }
 
   void _scrollToBottom() {
+    // We use a post frame callback to ensure the list has finished
+    // rendering the new item before we scroll to the very bottom.
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scrollController.hasClients) {
         _scrollController.animateTo(
-          0.0,
+          _scrollController.position.maxScrollExtent,
           duration: const Duration(milliseconds: 300),
           curve: Curves.easeOut,
         );
@@ -92,13 +95,13 @@ class _AiChatScreenState extends State<AiChatScreen> {
           Expanded(
             child: ListView.builder(
               controller: _scrollController,
-              reverse: true,
+              // reverse: false ensures the first message stays at the top
+              reverse: false,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
               itemCount: _messages.length,
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
-                final reversedList = _messages.reversed.toList();
-                final messageData = reversedList[index];
+                final messageData = _messages[index];
 
                 return Padding(
                   padding: EdgeInsets.only(bottom: 16.h),
@@ -129,7 +132,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
               hintText: 'Type a message',
               fillColor: AppColors.cFFFFFF,
               borderColor: AppColors.cC4CDD5,
-              inputAction: TextInputAction.done,
+              inputAction:
+                  TextInputAction.send, // Changed to send for better UX
               suffixIcon: AppIcons.send,
               onTap: _sendMessage,
               borderRadius: 8.r,
