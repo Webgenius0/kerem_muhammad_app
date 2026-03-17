@@ -97,7 +97,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             CustomEditProfileCard(
               imageUrl:
                   "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500",
-              selectedImage: selectedImage, // Passed the picked file
+              selectedImage: selectedImage,
               heightController: heightController,
               activityController: activityController,
               currentWrightController: currentWeightController,
@@ -110,9 +110,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: CustomButtonprimary(
                 title: 'Save information',
-                onTap: () {
-                  // Handle save logic here
-                },
+                onTap: () {},
                 buttonColor: AppColors.primaryColor,
                 textColor: AppColors.cFFFFFF,
               ),
