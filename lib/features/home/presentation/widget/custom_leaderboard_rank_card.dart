@@ -7,6 +7,12 @@ import 'package:kerem_muhammad_app/constants/text_font_style.dart';
 import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
 class CustomLeaderboardRankCard extends StatelessWidget {
+  final String imageurl;
+  final String name;
+  final String userName;
+  final String score;
+  final String icon;
+
   const CustomLeaderboardRankCard({
     super.key,
     required this.imageurl,
@@ -15,11 +21,6 @@ class CustomLeaderboardRankCard extends StatelessWidget {
     required this.score,
     required this.icon,
   });
-  final String imageurl;
-  final String name;
-  final String userName;
-  final String score;
-  final String icon;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class CustomLeaderboardRankCard extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Colors.black.withAlpha(20),
-              offset: Offset(0, 4),
+              offset: const Offset(0, 4),
               blurRadius: 20,
             ),
           ],
@@ -41,42 +42,44 @@ class CustomLeaderboardRankCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // Left side: profile image + name/username
-            Row(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(300.r),
-                  child: CachedNetworkImageWidget(
-                    imgUrl: imageurl,
-                    height: 50.h,
-                    width: 50.w,
+            Expanded(
+              child: Row(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(300.r),
+                    child: CachedNetworkImageWidget(
+                      imgUrl: imageurl,
+                      height: 50.h,
+                      width: 50.w,
+                    ),
                   ),
-                ),
-                UIHelper.horizontalspace12,
-                SizedBox(
-                  width: 200.w, // constrain width
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        name,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextFontStyle.txtfontstyle14w600c212121,
-                      ),
-                      UIHelper.verticalSpace(8.h),
-                      Text(
-                        userName,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextFontStyle.txtfontstyle12w400c637381,
-                      ),
-                    ],
+                  UIHelper.horizontalspace12,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          name,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextFontStyle.txtfontstyle14w600c212121,
+                        ),
+                        UIHelper.verticalSpace(8.h),
+                        Text(
+                          userName,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextFontStyle.txtfontstyle12w400c637381,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
 
+            UIHelper.horizontalspace12,
             Column(
               mainAxisSize: MainAxisSize.min,
               children: [

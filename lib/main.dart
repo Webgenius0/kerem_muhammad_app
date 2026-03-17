@@ -49,10 +49,10 @@ void main() async {
   } catch (e) {
     log('Error setting high refresh rate: $e');
   }
-  runApp(const MyApp());
-  // runApp(
-  //   DevicePreview(enabled: !kReleaseMode, builder: (context) => const MyApp()),
-  // );
+  // runApp(const MyApp());
+  runApp(
+    DevicePreview(enabled: !kReleaseMode, builder: (context) => const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -117,7 +117,7 @@ class UtillScreenMobile extends StatelessWidget {
             },
             navigatorKey: NavigationService.navigatorKey,
             onGenerateRoute: RouteGenerator.generateRoute,
-            home: const Loading(),
+            home: const NavigationScreen(),
           ),
         );
       },
