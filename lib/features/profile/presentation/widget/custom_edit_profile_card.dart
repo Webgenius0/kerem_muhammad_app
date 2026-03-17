@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,7 +13,7 @@ class CustomEditProfileCard extends StatelessWidget {
   const CustomEditProfileCard({
     super.key,
     required this.imageUrl,
-
+    this.selectedImage, // Added this
     required this.birthYearController,
     required this.heightController,
     required this.activityController,
@@ -20,8 +21,9 @@ class CustomEditProfileCard extends StatelessWidget {
     required this.goalWeightController,
     required this.onTapEditprofile,
   });
-  final String imageUrl;
 
+  final String imageUrl;
+  final File? selectedImage; // Added this
   final TextEditingController birthYearController;
   final TextEditingController heightController;
   final TextEditingController activityController;
@@ -40,7 +42,7 @@ class CustomEditProfileCard extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Colors.black.withAlpha(20),
-              offset: Offset(0, 4),
+              offset: const Offset(0, 4),
               blurRadius: 20,
               spreadRadius: 0,
             ),
@@ -57,16 +59,21 @@ class CustomEditProfileCard extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(260.r),
-                    child: CachedNetworkImageWidget(
-                      imgUrl: imageUrl,
-                      height: 64.h,
-                      width: 64.w,
-                    ),
+                    child: selectedImage != null
+                        ? Image.file(
+                            selectedImage!,
+                            height: 64.h,
+                            width: 64.w,
+                            fit: BoxFit.cover,
+                          )
+                        : CachedNetworkImageWidget(
+                            imgUrl: imageUrl,
+                            height: 64.h,
+                            width: 64.w,
+                          ),
                   ),
-
                   Positioned(
                     bottom: 4.h,
-
                     right: -4.w,
                     child: GestureDetector(
                       onTap: onTapEditprofile,
@@ -80,110 +87,25 @@ class CustomEditProfileCard extends StatelessWidget {
                 ],
               ),
             ),
-
             UIHelper.verticalspace24,
+            // Activity and Height Row
             Row(
               children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Activity Level',
-                        style: TextFontStyle.txtfontstyle14w500c212121,
-                      ),
-                      UIHelper.verticalSpace(8.h),
-
-                      CustomTextField(
-                        controller: activityController,
-                        hintText: 'Type here',
-                        fillColor: AppColors.cFFFFFF,
-                        borderColor: AppColors.cDFE3E8,
-                        borderRadius: 8.r,
-                        inputAction: TextInputAction.next,
-                      ),
-                    ],
-                  ),
-                ),
+                _buildFieldColumn('Activity Level', activityController),
                 UIHelper.horizontalspace16,
-
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Height',
-                        style: TextFontStyle.txtfontstyle14w500c212121,
-                      ),
-                      UIHelper.verticalSpace(8.h),
-
-                      CustomTextField(
-                        controller: heightController,
-                        hintText: 'Type here',
-                        fillColor: AppColors.cFFFFFF,
-                        borderColor: AppColors.cDFE3E8,
-                        borderRadius: 8.r,
-                        inputAction: TextInputAction.next,
-                      ),
-                    ],
-                  ),
-                ),
+                _buildFieldColumn('Height', heightController),
               ],
             ),
-
             UIHelper.verticalspace16,
-
+            // Weight Row
             Row(
               children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Current Weight',
-                        style: TextFontStyle.txtfontstyle14w500c212121,
-                      ),
-                      UIHelper.verticalSpace(8.h),
-
-                      CustomTextField(
-                        controller: currentWrightController,
-                        hintText: 'Type here',
-                        fillColor: AppColors.cFFFFFF,
-                        borderColor: AppColors.cDFE3E8,
-                        borderRadius: 8.r,
-                        inputAction: TextInputAction.next,
-                      ),
-                    ],
-                  ),
-                ),
+                _buildFieldColumn('Current Weight', currentWrightController),
                 UIHelper.horizontalspace16,
-
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Goal Weight',
-                        style: TextFontStyle.txtfontstyle14w500c212121,
-                      ),
-                      UIHelper.verticalSpace(8.h),
-
-                      CustomTextField(
-                        controller: goalWeightController,
-                        hintText: 'Type here',
-                        fillColor: AppColors.cFFFFFF,
-                        borderColor: AppColors.cDFE3E8,
-                        borderRadius: 8.r,
-                        inputAction: TextInputAction.next,
-                      ),
-                    ],
-                  ),
-                ),
+                _buildFieldColumn('Goal Weight', goalWeightController),
               ],
             ),
-
             UIHelper.verticalspace16,
-
             Text(
               'Birthday Year',
               style: TextFontStyle.txtfontstyle14w500c212121,
@@ -199,6 +121,27 @@ class CustomEditProfileCard extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  // Helper to keep the code clean
+  Widget _buildFieldColumn(String label, TextEditingController controller) {
+    return Expanded(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(label, style: TextFontStyle.txtfontstyle14w500c212121),
+          UIHelper.verticalSpace(8.h),
+          CustomTextField(
+            controller: controller,
+            hintText: 'Type here',
+            fillColor: AppColors.cFFFFFF,
+            borderColor: AppColors.cDFE3E8,
+            borderRadius: 8.r,
+            inputAction: TextInputAction.next,
+          ),
+        ],
       ),
     );
   }

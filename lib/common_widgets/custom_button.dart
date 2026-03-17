@@ -34,7 +34,7 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 10.h),
+        padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 10.h),
         decoration: BoxDecoration(
           color: bgColor,
           border: Border.all(color: borderColor!, width: 1.w),
@@ -55,11 +55,13 @@ class CustomButton extends StatelessWidget {
               ),
               SizedBox(width: 6.w),
             ],
-            Text(
-              text.tr,
-              textAlign: TextAlign.center,
-              style: TextFontStyle.txtfontstyle16w600cFFFFFF.copyWith(
-                color: textColor,
+            Flexible(
+              child: Text(
+                text.tr,
+                textAlign: TextAlign.center,
+                style: TextFontStyle.txtfontstyle16w600cFFFFFF.copyWith(
+                  color: textColor,
+                ),
               ),
             ),
           ],
