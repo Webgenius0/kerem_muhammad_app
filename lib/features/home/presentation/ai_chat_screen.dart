@@ -21,7 +21,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final TextEditingController _messageController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
 
-  // Initializing with one message
   final List<Map<String, dynamic>> _messages = [
     {
       "text":
@@ -38,14 +37,12 @@ class _AiChatScreenState extends State<AiChatScreen> {
     final currentTime = DateFormat('h:mm a').format(DateTime.now());
 
     setState(() {
-      // 1. Add user message to the list
       _messages.add({"text": userText, "isAi": false, "time": currentTime});
     });
 
     _messageController.clear();
     _scrollToBottom();
 
-    // 2. Simulate AI "Thinking" delay
     await Future.delayed(const Duration(milliseconds: 800));
 
     setState(() {
@@ -61,7 +58,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
   }
 
   void _scrollToBottom() {
-    // In a reversed list, 0.0 is the bottom (latest message)
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scrollController.hasClients) {
         _scrollController.animateTo(
@@ -93,19 +89,14 @@ class _AiChatScreenState extends State<AiChatScreen> {
       ),
       body: Column(
         children: [
-          // ==============================
-          // 1. CHAT MESSAGES LIST
-          // ==============================
           Expanded(
             child: ListView.builder(
               controller: _scrollController,
-              reverse: true, // Key for WhatsApp-style behavior
+              reverse: true,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
               itemCount: _messages.length,
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
-                // Since reverse is true, index 0 is the bottom of the screen.
-                // We access the list from the end (most recent) to the beginning.
                 final reversedList = _messages.reversed.toList();
                 final messageData = reversedList[index];
 
@@ -122,8 +113,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                       : CustomUserChatWidget(
                           message: messageData["text"],
                           messageTime: messageData["time"],
-                          messageContainerColor:
-                              AppColors.cDBEAFE, // Light Blue
+                          messageContainerColor: AppColors.cDBEAFE,
                           borderColor: AppColors.c1A1A7E10percent,
                           messageTextColor: AppColors.c161C24,
                         ),
@@ -132,9 +122,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
             ),
           ),
 
-          // ==============================
-          // 2. BOTTOM INPUT FIELD
-          // ==============================
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: CustomTextFieldChat(
