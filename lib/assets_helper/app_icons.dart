@@ -74,4 +74,5 @@ class AppIcons {
   static const String rankup = '$basepathIcon/rankup.svg';
   static const String donegrey = '$basepathIcon/donegrey.svg';
   static const String card = '$basepathIcon/card.svg';
+  static const String send = '$basepathIcon/send.svg';
 }
