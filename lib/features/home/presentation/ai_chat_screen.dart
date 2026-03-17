@@ -3,13 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_colors.dart';
 import 'package:kerem_muhammad_app/assets_helper/app_icons.dart';
 import 'package:kerem_muhammad_app/common_widgets/custom_appbar.dart';
-import 'package:kerem_muhammad_app/common_widgets/custom_text_field.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_ai_chat_widget.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_text_field_chat.dart';
 import 'package:kerem_muhammad_app/features/home/presentation/widget/custom_user_chat_widget.dart';
 import 'package:kerem_muhammad_app/helpers/navigation_service.dart';
 import 'package:intl/intl.dart';
-import 'package:kerem_muhammad_app/helpers/ui_helpers.dart'; // Add intl to your pubspec.yaml for real time
+import 'package:kerem_muhammad_app/helpers/ui_helpers.dart';
 
 class AiChatScreen extends StatefulWidget {
   const AiChatScreen({super.key});
@@ -151,70 +150,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
           ),
 
           UIHelper.verticalspace32,
-          // Container(
-          //   padding: EdgeInsets.only(
-          //     left: 16.w,
-          //     right: 16.w,
-          //     top: 12.h,
-          //     bottom: MediaQuery.of(context).padding.bottom + 12.h,
-          //   ),
-          //   decoration: BoxDecoration(
-          //     color: Colors.white,
-          //     boxShadow: [
-          //       BoxShadow(
-          //         color: Colors.black.withOpacity(0.05),
-          //         offset: const Offset(0, -4),
-          //         blurRadius: 10,
-          //       ),
-          //     ],
-          //   ),
-          //   child: Row(
-          //     children: [
-          //       Expanded(
-          //         child: Container(
-          //           decoration: BoxDecoration(
-          //             color: const Color(0xFFF9FAFB),
-          //             borderRadius: BorderRadius.circular(24.r),
-          //             border: Border.all(color: const Color(0xFFE5E7EB)),
-          //           ),
-          //           child: TextField(
-          //             controller: _messageController,
-          //             style: TextStyle(fontSize: 14.sp),
-          //             decoration: InputDecoration(
-          //               hintText: "Type a message...",
-          //               hintStyle: TextStyle(
-          //                 color: Colors.grey,
-          //                 fontSize: 14.sp,
-          //               ),
-          //               border: InputBorder.none,
-          //               contentPadding: EdgeInsets.symmetric(
-          //                 horizontal: 20.w,
-          //                 vertical: 12.h,
-          //               ),
-          //             ),
-          //             onSubmitted: (_) => _sendMessage(), // Send on "Enter" key
-          //           ),
-          //         ),
-          //       ),
-          //       UIHelper.horizontalSpace(12.w),
-          //       GestureDetector(
-          //         onTap: _sendMessage,
-          //         child: Container(
-          //           padding: EdgeInsets.all(12.w),
-          //           decoration: const BoxDecoration(
-          //             shape: BoxShape.circle,
-          //             color: Color(0xFF0066FF),
-          //           ),
-          //           child: Icon(
-          //             Icons.send_rounded,
-          //             color: Colors.white,
-          //             size: 20.sp,
-          //           ),
-          //         ),
-          //       ),
-          //     ],
-          //   ),
-          // ),
         ],
       ),
     );
