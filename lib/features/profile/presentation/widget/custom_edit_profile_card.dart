@@ -13,7 +13,7 @@ class CustomEditProfileCard extends StatelessWidget {
   const CustomEditProfileCard({
     super.key,
     required this.imageUrl,
-    this.selectedImage, // Added this
+    this.selectedImage,
     required this.birthYearController,
     required this.heightController,
     required this.activityController,
@@ -23,7 +23,7 @@ class CustomEditProfileCard extends StatelessWidget {
   });
 
   final String imageUrl;
-  final File? selectedImage; // Added this
+  final File? selectedImage;
   final TextEditingController birthYearController;
   final TextEditingController heightController;
   final TextEditingController activityController;
