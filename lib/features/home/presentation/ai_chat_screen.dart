@@ -43,7 +43,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _messageController.clear();
     _scrollToBottom();
 
-    // Simulating AI thinking time
     await Future.delayed(const Duration(milliseconds: 800));
 
     setState(() {
@@ -59,8 +58,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
   }
 
   void _scrollToBottom() {
-    // We use a post frame callback to ensure the list has finished
-    // rendering the new item before we scroll to the very bottom.
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scrollController.hasClients) {
         _scrollController.animateTo(
@@ -95,7 +92,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
           Expanded(
             child: ListView.builder(
               controller: _scrollController,
-              // reverse: false ensures the first message stays at the top
               reverse: false,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
               itemCount: _messages.length,
@@ -124,7 +120,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
               },
             ),
           ),
-
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: CustomTextFieldChat(
@@ -132,8 +127,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
               hintText: 'Type a message',
               fillColor: AppColors.cFFFFFF,
               borderColor: AppColors.cC4CDD5,
-              inputAction:
-                  TextInputAction.send, // Changed to send for better UX
+              inputAction: TextInputAction.send,
               suffixIcon: AppIcons.send,
               onTap: _sendMessage,
               borderRadius: 8.r,
