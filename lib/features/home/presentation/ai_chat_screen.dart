@@ -61,7 +61,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scrollController.hasClients) {
         _scrollController.animateTo(
-          0.0,
+          _scrollController.position.maxScrollExtent,
           duration: const Duration(milliseconds: 300),
           curve: Curves.easeOut,
         );
@@ -92,13 +92,12 @@ class _AiChatScreenState extends State<AiChatScreen> {
           Expanded(
             child: ListView.builder(
               controller: _scrollController,
-              reverse: true,
+              reverse: false,
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
               itemCount: _messages.length,
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
-                final reversedList = _messages.reversed.toList();
-                final messageData = reversedList[index];
+                final messageData = _messages[index];
 
                 return Padding(
                   padding: EdgeInsets.only(bottom: 16.h),
@@ -121,7 +120,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
               },
             ),
           ),
-
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: CustomTextFieldChat(
@@ -129,7 +127,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
               hintText: 'Type a message',
               fillColor: AppColors.cFFFFFF,
               borderColor: AppColors.cC4CDD5,
-              inputAction: TextInputAction.done,
+              inputAction: TextInputAction.send,
               suffixIcon: AppIcons.send,
               onTap: _sendMessage,
               borderRadius: 8.r,
