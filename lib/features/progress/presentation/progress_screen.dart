@@ -66,10 +66,8 @@ class _ProgressScreenState extends State<ProgressScreen> {
                       children: [
                         // ===================== weeek ========================
                         CustomWeekWidget(),
-
                         //======================== month =======================
                         CustomMonthWidget(),
-
                         //======================= 3 month ======================
                         CustomThreeMonthWidget(),
                       ],
