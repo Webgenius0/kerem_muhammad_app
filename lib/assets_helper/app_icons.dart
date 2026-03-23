@@ -32,7 +32,7 @@ class AppIcons {
   static const String breakfast = '$basepathIcon/breakfast.svg';
   static const String lunch = '$basepathIcon/lunch.svg';
   static const String workoutdubmall = '$basepathIcon/workoutdubmall.svg';
-  static const String weight = '$basepathIcon/wright.svg';
+  static const String weight = '$basepathIcon/weight.svg';
   static const String caloryColor = '$basepathIcon/calorycolor.svg';
   static const String avghr = '$basepathIcon/avghr.svg';
   static const String doneGreen = '$basepathIcon/donegreen.svg';
