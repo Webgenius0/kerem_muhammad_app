@@ -36,7 +36,8 @@ class CustomButtonprimary extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (svgicon != null) SvgPicture.asset(svgicon!),
+            if (svgicon != null)
+              SvgPicture.asset(svgicon!, height: 16.h, width: 16.w),
             UIHelper.horizontalSpace(6.w),
             Text(
               title,

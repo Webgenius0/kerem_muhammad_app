@@ -395,7 +395,6 @@ class _PaywalScreenState extends State<PaywalScreen> {
                 ],
               ),
             ),
-
             UIHelper.verticalSpace(28.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -408,7 +407,6 @@ class _PaywalScreenState extends State<PaywalScreen> {
                 textColor: AppColors.cFFFFFF,
               ),
             ),
-
             UIHelper.verticalSpace(14.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 60.w),
@@ -419,7 +417,6 @@ class _PaywalScreenState extends State<PaywalScreen> {
                 style: TextFontStyle.txtfontstyle10w500c000000,
               ),
             ),
-
             UIHelper.verticalspace32,
           ],
         ),
