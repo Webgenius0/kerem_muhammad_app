@@ -106,7 +106,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                 cardBorderColor: selectedPlanIndex == 0
                                     ? AppColors.cFF5722
                                     : AppColors.cFFFFFF,
-                                planPrice: '€13.99',
+                                planPrice: '€4.99',
                                 plantype: 'month',
                                 plandescription1:
                                     'Goal selection: Muscle building, fat loss',
@@ -127,7 +127,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                 cardBorderColor: selectedPlanIndex == 1
                                     ? AppColors.cFF5722
                                     : AppColors.cFFFFFF,
-                                planPrice: '€25.99',
+                                planPrice: '€9.99',
                                 plantype: 'month',
                                 plandescription1: 'Everything from Starter',
                                 plandescription2:
@@ -150,7 +150,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                     ? AppColors.cFF5722
                                     : AppColors.cFFFFFF,
                                 title: 'Premium',
-                                planPrice: '€34.99',
+                                planPrice: '€19.99',
                                 plantype: 'month',
                                 plandescription1:
                                     'Everything from Starter + Standard',
@@ -196,7 +196,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                 cardBorderColor: selectedPlanIndex == 0
                                     ? AppColors.cFF5722
                                     : AppColors.cFFFFFF,
-                                planPrice: '€13.99',
+                                planPrice: '€4.99',
                                 plantype: 'month',
                                 plandescription1:
                                     'Goal selection: Muscle building, fat loss',
@@ -217,7 +217,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                 cardBorderColor: selectedPlanIndex == 1
                                     ? AppColors.cFF5722
                                     : AppColors.cFFFFFF,
-                                planPrice: '€25.99',
+                                planPrice: '€9.99',
                                 plantype: 'month',
                                 plandescription1: 'Everything from Starter',
                                 plandescription2:
@@ -240,7 +240,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                     ? AppColors.cFF5722
                                     : AppColors.cFFFFFF,
                                 title: 'Premium',
-                                planPrice: '€34.99',
+                                planPrice: '€19.99',
                                 plantype: 'month',
                                 plandescription1:
                                     'Everything from Starter + Standard',
@@ -264,7 +264,6 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                                   textColor: AppColors.cFFFFFF,
                                 ),
                               ),
-
                               UIHelper.verticalspace32,
                             ],
                           ),

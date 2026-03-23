@@ -98,7 +98,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
                 final messageData = _messages[index];
-
                 return Padding(
                   padding: EdgeInsets.only(bottom: 16.h),
                   child: messageData["isAi"]
